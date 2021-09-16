@@ -1,7 +1,7 @@
 # MinTicCiclo03
 Repositorio para el equipo JASAF
 
-# MinTicCiclo03
+# Integrantes
 Jessica Garces Liz
 Alvaro Ripalino
 Fidel Fuerte
