@@ -1,0 +1,9 @@
+Descripción del Proyecto
+
+En este ciclo corresponde realizar un proyecto de desarrollo de aplicación Web,
+que Administre las ventas Online y físicas de una empresa de manufactura.
+
+Presentación.
+Mi nombre es Samir Alexander Diaz, Soy Administrador de Empresas, Soy de la ciudad de
+Cartagena, y vengo con toda la disposición y ganas de aportar y sacar adelante este 
+proyecto.

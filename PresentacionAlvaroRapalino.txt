@@ -1,0 +1,16 @@
+﻿Archivo de Texto presentacion
+Archivo de Texto presentacion
+
+Descripcion de 
+las tareas a realizar: 
+Crear user en Github para utilizar un repositorio remoto y local
+Crear cuenta en trello
+Reportar diariamente las tareas que realize y que realizare y en cual tuve algun inconveniente
+Clonar el rpositorio remoto para trabajar con los compañeros.
+
+Soy Alvaro Alfonso Rapalino Pedrozo, soy Cartagenero;
+Soy Ingeniero de Sistemas, tengo conocmiento en la programacion
+y manipulacion de bases de datos, pero quiero aprender la programacion en web y desarrollo de app
+
+
+Tmbien deseo aprender todo lo relacionado con el scrum.
