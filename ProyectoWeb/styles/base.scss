@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$font-size-label: 17px;
+$font-size: 15px;
+$font-color: black;
+$background-color: #faf9f8;
+$background-div: #ffffff;
+$background-button-submit: #222 none;
+$main-font: 'Muli', sans-serif;
+
+
+body {
+    background-color: $background-color;
+    padding: 30px 30px 15px 15px;
+    font-family: $main-font;
+}
+
+a {
+    text-transform: uppercase;
+    color: $font-color;
+}
+
+a:hover {
+    color: navy;
+}
+
+label {
+    font-size: $font-size-label;
+    color: $font-color;
+    font-weight: bold;
+}
+
+div h2{
+    text-align: center;
+}
+
+div label{
+    padding: 30px 0px 30px 0px;
+}
+
+.title {
+    text-transform: uppercase;
+    color: $font-color;
+}
+
+.div-formulario {
+    width: 100%;
+    background-color: $background-div;
+    padding: 30px 15px 30px 15px;
+  }
+
+.input-text {
+    border: 1px solid black;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #222;
+    font-size: $font-size;
+    letter-spacing: normal;
+    padding: 14px 25px 14px 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button-submit {
+    background: $background-button-submit;
+    border: 1px solid #222;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $main-font;
+    font-size: $font-size;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    min-height: 1em;
+    padding: 16px 16px 16px 16px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    width: 100%;
+    font-weight: bold;
+}
