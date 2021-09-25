@@ -1,0 +1,16 @@
+Descripción del Proyecto
+El proyecto del ciclo 3, corresponde al desarrollo de una aplicación web que tiene por objetivo diseñar un sistema 
+de gestión de facturación a través del cual se administre las ventas físicas y electrónicas de una empresa del 
+sector de manufactura.
+
+Este proyecto se fundamenta en el trabajo interdisciplinario, empleando la metodología Scrum y lenguajes de 
+programación como JavaScritp, TypeScritp, NodeJs, entre otros.  Durante el desarrollo del proyecto, se llevarán a 
+cabo una serie de reuniones donde se planearán las tareas a realizar e acuerdo con los objetivos semanales, cuyas 
+actividades serán asignadas de acuerdo con el rol de cada colaborador.  Así mismo, se realizará un entrega semanal 
+(Sprint) con las tareas desarrolladas para evaluar el cumplimiento de los objetivos propuestos para la semana.
+
+Presentación.
+Mi nombres es Adriana Vásquez Bustos, Contadora Pública especialista en Revisoría Fiscal y Auditoría Forense; soy 
+de la ciudad de Cali.  Este es mi primer acercamiento al mundo de la programación, del cual espero obtener 
+conocimientos que me permitan poder laborar desde mi casa y atender las necesidades especiales de mi hijo y las de 
+mi familia.
