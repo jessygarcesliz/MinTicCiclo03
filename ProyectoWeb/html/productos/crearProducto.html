@@ -9,21 +9,28 @@
         <div class="div-form">
             <div class="container">
                 <div>
-                    <label class="title">Registro Información de Productos.</label>
+                    <h2>Registro Información de Productos.</h2>
                 </div>
                 <form>
-                    <div>                     
-                        <input type="text" id="nombre" class="input-text" required placeholder="Nombre del Producto"/>
-                        <input type="text" id="marca" class="input-text" required placeholder="Marca"/>
-                        <input type="text" id="serial" class="input-text" required placeholder="Serial y/o ID"/>
-                        <textarea id="Descripción" rows="4" cols="50" placeholder="Caracteristicas del producto:">                        
-                        </textarea>
-                        <input type="numeric" id="valor" class="input-text" required placeholder="Precio"/>
-                    </div>
-                    <div>
-                        <button type="submit" class="button-submit"> 
-                            Almacenar Producto
-                        </button>    
+                    <div class="div-formulario">
+                        <div>
+                            <label>Nombre</label>                     
+                            <input type="text" id="nombre" class="input-text" required placeholder="Nombre del Producto"/>
+                            <label>Marca</label>
+                            <input type="text" id="marca" class="input-text" required placeholder="Marca"/>
+                            <label>Serial o ID</label>
+                            <input type="text" id="serial" class="input-text" required placeholder="Serial y/o ID"/>
+                            <label>Caracteristicas</label>
+                            <textarea id="Descripción" rows="4" cols="50" placeholder="Caracteristicas del producto:">                        
+                            </textarea>
+                            <label>Precio</label>
+                            <input type="numeric" id="valor" class="input-text" required placeholder="Precio"/>
+                        </div>
+                        <div>
+                            <button type="submit" class="button-submit"> 
+                                Almacenar Producto
+                            </button>    
+                        </div>
                     </div>
                 </form>
             </div>

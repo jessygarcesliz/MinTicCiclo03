@@ -9,27 +9,29 @@
         <div class="div-form">
             <div class="container">
                 <div>
-                    <label class="title">Actualización Información de Productos.</label>
+                    <h2>Actualización Información de Productos.</h2>
                 </div>
                 <form>
-                    <div> 
-                        <label>Serial o ID</label>
-                        <input type="text" id="serial" class="input-text" required placeholder="Serial y/o ID" readonly value="XDASF2356"/> 
-                        <label>Nombre</label>                 
-                        <input type="text" id="nombre" class="input-text" required placeholder="Nombre del Producto" value="Televisor de 90"/>
-                        <label>Marca</label>
-                        <input type="text" id="marca" class="input-text" required placeholder="Marca" value= "SONY"/>
-                        <label>Caracteristicas</label>
-                        <textarea id="Descripción" rows="4" cols="50" placeholder="Caracteristicas del producto:">
-                            Televisor 4K OLED con sonido DOLBY 5.0, UHDR, SmartTv, TDT integrada.                      
-                        </textarea> 
-                        <label>Precio</label>
-                        <input type="numeric" id="valor" class="input-text" required placeholder="Precio" value="$1000000"/>
-                    </div>
-                    <div>
-                        <button type="submit" class="button-submit" onclick="alert('Producto Actualizado')"> 
-                            Almacenar Producto
-                        </button>    
+                    <div class="div-formulario">
+                        <div> 
+                            <label>Serial o ID</label>
+                            <input type="text" id="serial" class="input-text" required disabled placeholder="Serial y/o ID" readonly value="XDASF2356"/> 
+                            <label>Nombre</label>                 
+                            <input type="text" id="nombre" class="input-text" required placeholder="Nombre del Producto" value="Televisor de 90"/>
+                            <label>Marca</label>
+                            <input type="text" id="marca" class="input-text" required placeholder="Marca" value= "SONY"/>
+                            <label>Caracteristicas</label>
+                            <textarea id="Descripción" rows="4" cols="50" placeholder="Caracteristicas del producto:">
+                                Televisor 4K OLED con sonido DOLBY 5.0, UHDR, SmartTv, TDT integrada.                      
+                            </textarea> 
+                            <label>Precio</label>
+                            <input type="numeric" id="valor" class="input-text" required placeholder="Precio" value="$1000000"/>
+                        </div>
+                        <div>
+                            <button type="submit" class="button-submit" onclick="alert('Producto Actualizado')"> 
+                                Actualizar Producto
+                            </button>    
+                        </div>
                     </div>
                 </form>
             </div>
