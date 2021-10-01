@@ -21,7 +21,7 @@ label {
 }
 
 div h2 {
-  text-align: center;
+  text-align: leftS;
 }
 
 div label {
@@ -134,4 +134,102 @@ div label {
   background-color: #cecaca;
   color: black;
 }
-/*# sourceMappingURL=login.css.map */
+
+.div-form {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 60%;
+  display: table-caption;
+}
+
+table {
+  border: 0px solid;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+table thead th {
+  background-color: black;
+  color: #faf9f8;
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(166, 169, 173, 0.205);
+}
+
+table tbody tr {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #438adb;
+  color: #faf9f8;
+}
+
+.table-button {
+  background: #5d91c2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 50px;
+  font-weight: bold;
+  border-radius: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table-button:hover {
+  background-color: #b1a7a7;
+  color: #faf9f8;
+}
+
+.container-filters {
+  background: white;
+  padding: 10px 10px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 2px 5px 2px #cecaca;
+          box-shadow: 0 2px 5px 2px #cecaca;
+}
+
+.small-input-text {
+  border: 1px solid black;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222;
+  font-size: 15px;
+  letter-spacing: normal;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.small-button {
+  background: #5d91c2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/*# sourceMappingURL=base.css.map */
