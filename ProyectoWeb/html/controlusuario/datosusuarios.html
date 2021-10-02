@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <h2>Crear Usuario</h2>
+    <div id="div-form-datoPerso" class="container-filters">
+        <form action="get" id="formulario" name="fornulario">
+            <legend>Datos Personales</legend>
+            <div class="container-filters">
+                <div id="div-informacionusuario">
+                    <label for="IDusuario">ID Usuario</label>
+                    <input type="text" id="IDUsuario">
+                    <label for="tipo"   >Tipo Usuario</label>
+
+                    <select name="tipoUsuario" id="tipo">
+                        <option value="">--selecion--</option>
+                        <option value="persona" name="persona">Persona</option>
+                        <option value="Empresa" name="Empresa">Empresa</option>
+                    </select><br>
+                    <label for="tipoDocumento">Tipo Documento</label>
+                    <select name="tipoDocumento" id="tipoDocumento">
+                        <option value="cedulaCiudadania">Cedula de Ciudadania</option>
+                        <option value="nit">Nit</option>
+                        <option value="tarjetaIdentida">Tarjeta de Identidad </option>
+                        <option value="RegistroCivil">Registro Civil </option>
+                        <option value="cedulaExtranjeria">Cedula de Extranjeria</option>
+                    </select>
+                    <label for="numeroDocumento">Numero Identidad</label>
+                    <input type="text" required  id="numeroDocumento"><br>
+                    <label for="direccion">Direccion</label>
+                    <input type="text" id="direccion">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono">
+                </div>
+                
+
+                <div class="">
+
+                    <div id="div-dateperson">
+                        <label for="nombre">Nombres</label>
+                        <input type="text" required id="nombre">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" required id="apellidos"><br>
+                        <label for="razon" name="razon" >Razon Social</label>
+                        <input type="text" id="razon">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo"><br>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+            <div id="estado" class="container-filters">
+
+                <ul>
+                    <li>
+                        <input type="radio" id="actualizado" name="estado" value="Actualizado" checked>
+                        <label for="actualizado">Autorizado</label>
+                    </li>
+                    <li>
+                        
+                        <input type="radio" id="noAutorizado" name="estado" value="noAutorizado">
+                        <label for="noAutorizado">No Autorizado</label>
+                    </li>
+                    <li>
+                       
+                        <input type="radio" id="pendiente" name="estado" value="pendiente">
+                        <label for="pendiente">Pendiente</label>
+                    </li>
+                </ul>
+                <div id="div-rolusuario">
+                    <label for="rolUsuario">Tipo Usuario:</label>
+
+                    <select name="rol" id="rolUsuario" required>
+                        <option value="">--seleccion--</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="vendedor">Vendedor</option>
+
+                    </select>
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </form>
+    
+    </div >
+    <div id="controles">
+        <button form="formulario" type="reset" class="small-button">Cancelar</button>
+        <button form="formulario" type="submit" class="small-button">Guardar</button>
+        <button form="formulario" type="button" class="small-button">Actualizar</button>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo Documento</th>
+                    <th>Num Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    <th>permiso</th>
+                    <th>Actualizar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>xxx</td>
+                    <td>00000</td>
+                    <td>abc</td>
+                    <td>xyz</td>
+                    <td>xxx@xx.xx</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td><button class="table-button" title="Actualizar">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </button></td>
+                </tr>
+                
+                <tr>
+                    <td>002</td>
+                    <td>xxx</td>
+                    <td>00000</td>
+                    <td>abc</td>
+                    <td>xyz</td>
+                    <td>xxx@xx.xx</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td><button class="table-button" title="Actualizar">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </button></td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>xxx</td>
+                    <td>00000</td>
+                    <td>abc</td>
+                    <td>xyz</td>
+                    <td>xxx@xx.xx</td>
+                    <td>Administrador</td>
+                    <td>Autorizado</td>
+                    <td><button class="table-button" title="Actualizar">
+                            <i class="fa fa-pencil-square-o"></i>
+                        </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -236,4 +236,41 @@ div label{
     padding-top: 5px;
     padding-bottom: 5px;
 }
+   
 
+
+
+#div-form-datoPerso label {
+
+display: inline-block;
+width: 6em;
+
+}
+#estado ul li {
+    display: inline-block;
+}
+#estado ul li label
+{
+    display: inline-block;
+    width: 8em;  
+}
+#div-informacionusuario input{
+    width: 10em;
+}
+#div-dateperson label {
+position: relative;
+    display: inline-block;
+    width: 6.5em;  
+}
+#div-dateperson input{
+    width: 12em;
+}
+#div-rolusuario label{
+    width: 12em;
+}
+#div-filterUser input{
+display: block;
+box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
+
+
+}
