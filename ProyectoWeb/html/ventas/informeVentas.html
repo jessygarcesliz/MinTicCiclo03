@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="esp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipo JASAF</title>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css"
+    />
+
+    <script src="../daterangepicker-master/daterangepicker.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../daterangepicker-master/daterangepicker.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="nombre">JASAF Manofactura</h1>
+      <nav class="navmenu">
+        <a class="refmenu" href="#">Inicio</a>
+        <a class="refmenu" href="#">Vista 1</a>
+        <a class="refmenu" href="#">Vista 2</a>
+        <a class="refmenu" href="#">Vista 3</a>
+      </nav>
+    </header>
+
+    <div id="body">
+      <div id="campos">
+        <fieldset id="venta">
+          <legend><u>Connsulta de Ventas</u></legend>
+          <img src="./css/calendar_40px.png " />
+          <input name="dates" id="fechas" type="text" />
+          <input name="dates" id="fechas" type="text" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>Connsulta de Vendedor</u></legend>
+          <img src="./css/reseller_40px.png " />
+          <input id="enDatos" type="text" placeholder="Nombre del Vendedor" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>Connsulta de Cliente</u></legend>
+          <img src="./css/customer_40px.png" />
+          <input id="enDatos" type="text" placeholder="Nombre del Cliente" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>Connsulta de Producto</u></legend>
+          <img src="./css/used_product_40px.png" />
+          <input id="enDatos" type="text" placeholder="Nombre del Producto" />
+        </fieldset>
+      </div>
+
+      <div class="botones">
+        <button class="button-submit">Listar</button>
+        <button class="button-submit">Descargar</button>
+        <button class="button-submit">Eliminar</button>
+        <button class="button-submit">Clear</button>
+      </div>
+
+      <div id="recuadro">
+        <table>
+          <thead>
+            <th>Item</th>
+            <th>Fecha de Venta</th>
+            <th>Código Vendedor</th>
+            <th>Nombre del Vendedor</th>
+            <th>Id Cliente</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Valor Unitario</th>
+            <th>Cantidad Vendida</th>
+            <th>Total</th>
+          </thead>
+          <tbody id="tabla"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $('input[name="dates"]').daterangepicker(
+          {
+            singleDatePicker: true,
+            showDropdowns: true,
+            minYear: 1901,
+            maxYear: parseInt(moment().format("YYYY"), 10),
+          },
+          function (start, end, label) {
+            var years = moment().diff(start, "years");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
