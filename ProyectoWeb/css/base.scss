@@ -1,239 +1,414 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 $font-size-label: 17px;
 $font-size: 15px;
 $font-color: black;
 $header-table-color: black;
-$header-table-font:#faf9f8;
+$header-table-font: #faf9f8;
 $background-color: #faf9f8;
 $background-div: #ffffff;
 $background-button-submit: #222 none;
-$main-font: 'Muli', sans-serif;
+$main-font: "Muli", sans-serif;
 $background-table-button: rgb(93, 145, 194);
 
 //define los estilos globales que va a tener la etiqueta <BODY>
 body {
-    background-color: $background-color;
-    padding: 30px 30px 15px 15px;
-    font-family: $main-font;
+  background-color: $background-color;
+  font-family: $main-font;
 }
 
 //define los estilos globales que va a tener la etiqueta <a> Que es un elemento de tipo enlace
 a {
-    text-transform: capitalize;
-    color: $font-color;
+  text-transform: capitalize;
+  color: $font-color;
 }
 
 //evento hover, sobre a que modifica el color cuando se pasa el mouse por encima
 a:hover {
-    color: navy;
+  color: navy;
 }
-
 
 label {
-    font-size: $font-size-label;
-    color: $font-color;
-    font-weight: bold;
+  font-size: $font-size-label;
+  color: $font-color;
+  font-weight: bold;
 }
 
-div h2{
-    text-align: leftS;
+div h2 {
+  text-align: leftS;
+  padding-bottom: 10px;
 }
 
-div label{
-    padding: 30px 0px 30px 0px;
+div label {
+  padding: 30px 0px 30px 0px;
 }
 
 .title {
-    text-transform: capitalize;
-    color: $font-color;
-    text-align: left;
+  text-transform: capitalize;
+  color: $font-color;
+  text-align: left;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .small-container {
-    width: 350px;
-    min-height: 90vh;
-    background: #fff;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
+  width: 350px;
+  min-height: 90vh;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: calc(100% - 350px);
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: calc(100% - 350px);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
 }
 
 .container-image::before {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: -webkit-linear-gradient(bottom, #78aee4, #9ab8db);
-    background: -o-linear-gradient(bottom, #78aee4, #9ab8db);
-    background: -moz-linear-gradient(bottom, #78aee4, #9ab8db);
-    background: linear-gradient(bottom, #78aee4, #9ab8db);
-    opacity: 0.5;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(bottom, #78aee4, #9ab8db);
+  background: -o-linear-gradient(bottom, #78aee4, #9ab8db);
+  background: -moz-linear-gradient(bottom, #78aee4, #9ab8db);
+  background: linear-gradient(bottom, #78aee4, #9ab8db);
+  opacity: 0.5;
 }
 
 .div-formulario {
-    width: 100%;
-    background-color: $background-div;
-    padding: 30px 15px 30px 15px;
-    box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
-    position: relative;
-  }
+  width: 100%;
+  background-color: $background-div;
+  padding: 30px 15px 30px 15px;
+  box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
+  position: relative;
+}
 
 .input-text {
-    border: 1px solid black;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: #222;
-    font-size: $font-size;
-    letter-spacing: normal;
-    padding: 14px 25px 14px 10px;
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: $font-size;
+  letter-spacing: normal;
+  padding: 14px 25px 14px 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .button-submit {
-    background: $background-button-submit;
-    border: 1px solid #222;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $main-font;
-    font-size: $font-size;
-    font-style: normal;
-    letter-spacing: 1px;
-    line-height: 1em;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    min-height: 1em;
-    padding: 16px 16px 16px 16px;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: none;
-    text-transform: uppercase;
-    vertical-align: baseline;
-    width: 100%;
-    font-weight: bold;
-    border-radius: 5px;
+  background: $background-button-submit;
+  border: 1px solid #222;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: $font-size;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  padding: 16px 16px 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-.button-submit:hover{
-    background-color:rgb(206, 202, 202);
-    color: black;
+.button-submit:hover {
+  background-color: rgb(206, 202, 202);
+  color: black;
 }
 
+.p-30-p-15{
+  padding: 30px 30px 15px 15px;
+
+}
 
 .div-form {
-    align-content: center;
-    width: 70%;
-    display: table-caption;
-  }
-  
-  table {
-    border: 0px solid;
-    padding: 10px 10px 10px 10px;
-      width: 100%;
-  }
-  
-  table thead th {
-    background-color: $header-table-color; 
+  padding: 30px 30px 15px 15px;
+  align-content: center;
+  width: 70%;
+  display: table-caption;
+}
+
+table {
+  border: 0px solid;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+th{
+    width:1%;
+    margin: 15px;
     color: $header-table-font;
-    text-transform: capitalize;
+    background-color: $header-table-color;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 10px;
   }
 
-  tr:nth-child(even) {
-    background-color: rgba(166, 169, 173, 0.205);
-  }
+table thead th {
+  text-transform: capitalize;
+}
 
-  table tbody tr {
-      text-align: center;
-  }
+tr:nth-child(even) {
+  background-color: rgba(166, 169, 173, 0.205);
+}
 
-  tr:hover{
-      background-color:rgb(67, 138, 219);
-      color: $header-table-font;
-  }
+table tbody tr {
+  text-align: center;
+}
 
-  .table-button {
-    background: $background-table-button;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $main-font;
-    font-size: $font-size;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    min-height: 1em;
-    vertical-align: baseline;
-    width: 50px;
-    font-weight: bold;
-    border-radius: 80px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+tr:hover {
+  background-color: rgb(67, 138, 219);
+  color: $header-table-font;
+}
+
+.table-button {
+  background: $background-table-button;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: $font-size;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 50px;
+  font-weight: bold;
+  border-radius: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .table-button:hover {
-    background-color: #b1a7a7;
-    color: $header-table-font;
+  background-color: #b1a7a7;
+  color: $header-table-font;
 }
 
 .container-filters {
-    background: white;
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
+  background: white;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
 }
 
 .small-input-text {
-    border: 1px solid black;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: #222;
-    font-size: $font-size;
-    letter-spacing: normal;
-    padding: 5px 5px 5px 5px;
-    width: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: $font-size;
+  letter-spacing: normal;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .small-button {
-    background: $background-table-button;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: $main-font;
-    font-size: $font-size;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    min-height: 1em;
-    vertical-align: baseline;
-    width: 100px;
-    font-weight: bold;
-    border-radius: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  background: $background-table-button;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: $font-size;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
+.small-button-submit {
+  background: $background-button-submit;
+  border: 1px solid #222;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: $font-size;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 5px 5px 5px 5px;
+  min-height: 1em;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 120px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.small-button-submit:hover {
+  background-color: rgb(206, 202, 202);
+  color: black;
+}
+
+* {
+  margin: 0px;
+}
+
+u {
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(132, 135, 139);
+}
+
+img {
+  margin-left: 0px;
+  margin-right: 10px;
+  background-color: auto;
+  float: right;
+}
+
+.navmenu {
+  position: absolute;
+  display: inline;
+  flex: inline-block;
+  float: right;
+  margin-left: 35%;
+}
+
+.refmenu {
+  /*color: rgb(82, 7, 7);*/
+  display: inline-block;
+  margin: 20px;
+  flex: inline-block;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-out all;
+}
+
+.navmenu a:hover {
+  background: #faf9f8;
+  color: black;
+  margin: 5px;
+  padding: 15px;
+}
+
+#campos {
+  border: 2px solid rgb(99, 99, 99);
+  background: #f8f9f9;
+  margin-top: 10px; 
+  padding-bottom: 20px;
+  border-radius: 15px;
+}
+
+.botones {
+  width: 100%;
+  text-align: center;
+  display:inline-flex;
+  justify-content: center;
+}
+
+#body {
+  background-color: #faf9f8;
+  padding: 0px 30px 15px 15px;
+  font-family: "Muli", sans-serif;
+}
+
+header {
+  padding-bottom: 15px;
+  /*margin-top: 0x;*/
+  background: #273238;
+}
+#nombre-app{
+  color: rgb(254, 213, 95);
+  margin-left: 2%;
+  margin-top: 20px;
+  width: 30%;
+  flex: inline;
+  display: inline-block;
+  font-size: 20px;
+}
+
+#recuadro {
+  border: 1px solid black;
+  height: 600px;
+  background-color: rgb(250, 244, 244);
+  margin-top: 15px;
+}
+
+#venta {
+  display: flex;
+  width: 40%;
+  position: relative;
+  display: inline;
+  margin-left: 5%;
+  margin-top: 15px;
+  background-color: #faf9f8;
+  border-radius: 10px;
+}
+
+#fechas{
+  margin-right: 20px;
+  width: 33%;
+  height: 40px;
+  /*margin-right: 10px;*/
+  /*display: inline-block;*/
+  float: right;
+  padding-top: 0.9em;
+  padding-right: 1.2em;
+  padding-bottom: 0.9em;
+  padding-left: 1.2em;
+  border-color: rgb(99, 99, 99);
+}
+
+#enDatos {
+  margin-right: 20px;
+  width: 70%;
+  height: 40px;
+  /*margin-right: 10px;*/
+  /*display: inline-block;*/
+  float: right;
+  padding-top: 0.9em;
+  padding-right: 1.2em;
+  padding-bottom: 0.9em;
+  padding-left: 1.2em;
+  border-color: rgb(99, 99, 99);
+}
+
+fieldset {
+  display: inline-flex;
+  position: relative;
+  display: inline;
+  margin-left: 1%;
+  margin-top: 15px;
+  background-color: #faf9f8;
+  border-radius: 4px;
+}
