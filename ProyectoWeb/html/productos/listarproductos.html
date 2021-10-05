@@ -8,31 +8,40 @@
 </head>
 
 <body>
-  <div>
-    <div><h2>Filtros</h2></div>
-    
+  <header>
+    <h1 id="nombre-app">JASAF Manofactura</h1>
+    <nav class="navmenu">
+      <a class="refmenu" href="#">Inicio</a>
+      <a class="refmenu" href="#">Vista 1</a>
+      <a class="refmenu" href="#">Vista 2</a>
+      <a class="refmenu" href="#">Vista 3</a>
+    </nav>
+  </header>
+
+  <div class="p-30-p-15">
     <form>
-      <div class="container-filters">
-        <div style="margin:5px;">
-          <label>ID del producto</label>
-          <input class="small-input-text" type="text" id="idProducto" />
-        </div>
-        <div style="margin:5px;">
-          <label>Nombre del producto</label>
-          <input class="small-input-text" type="text" id="nombreProducto" />
-        </div>
-        <div style="margin:5px;">
-          <button class="small-button" title="Filtrar">
-            <i class="fa fa-pencil-square-o"></i>
-            Filtrar
-          </button>
-        </div>
+      <div id="campos">
+        <fieldset>
+          <legend><u>Consulta de Productos</u></legend>
+          <div style="margin:5px;">
+            <label>ID del producto</label>
+            <input class="small-input-text" type="text" id="idProducto" />
+            <label>Nombre del producto</label>
+            <input class="small-input-text" type="text" id="nombreProducto" />
+          </div>
+        </fieldset>
+      </div>
+      <div class="botones">
+        <button class="small-button-submit" title="Filtrar">
+          <i class="fa fa-pencil-square-o"></i>
+          Filtrar
+        </button>
       </div>
     </form>
     <div>
       <h2>Listado de Productos.</h2>
     </div>
-    <div class="container">
+    <div id="recuadro">
       <table>
         <thead>
           <tr>
@@ -43,7 +52,7 @@
             <th>Acción</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="tabla">
           <tr>
             <td>01</td>
             <td>SONY</td>
