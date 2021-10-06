@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipo JASAF</title>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+
+  <script src="../../externalComponents/daterangepicker-master/daterangepicker.js"></script>
+  <link rel="stylesheet" href="./Ventas.css">
+  <!--<link rel="stylesheet" href="../../css/base.css" />-->
+  <link rel="stylesheet" href="../../externalComponents/daterangepicker-master/daterangepicker.css" />
+</head>
+
+<body>
+  <header>
+    <h1 id="nombre-app">JASAF Modulo - Actualizacion de Ventas</h1>
+    <nav class="navmenu">
+      
+    </nav>
+  </header>
+  <div id="body">
+      <div id="campos">
+        <fieldset id="venta">
+          <legend><u>----------------------Fecha Venta ----------------- Id Venta------------------</u></legend>
+          <img src="./css/calendar_40px.png " />
+          <input class="input-text" id="fechas" type="Number" placeholder="Autonumerico" readonly="readonly"/>
+          <input class="input-text" id="fechas" type="date"/>
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>--------------------------Codigo----------------Nombre Vendedor------------</u></legend>
+          <img src="./css/reseller_40px.png " />
+          <input class="input-text" id="fechas" type="text" placeholder="Digite Vendedor" />
+          <input class="input-text" id="fechas" type="number" placeholder="Digite Codigo" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>-------------------------Cedula------------------Nombre del Cliente---------</u></legend>
+          <img src="./css/customer_40px.png" />
+          <input class="input-text" id="fechas" type="text" placeholder="Digte Nombre y Apellido  Cliente" />
+          <input class="input-text" id="fechas" type="number" placeholder="Digte Cedula" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>-------------------Codigo del Producto-------Descripcion del Producto-------</u></legend>
+          <img src="./css/used_product_40px.png" />
+          <input class="input-text" id="fechas" type="text" placeholder="Seleccione el Producto" />
+          <input class="input-text" id="fechas" type="text" placeholder="Codigo Producto" />
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>-----------------------Costo Unitario------------------Cantidad--------------</u></legend>
+          <form name="f">
+          <img src="./css/customer_40px.png" />
+          <input class="input-text" id="fechas" type="number" placeholder="Cantidad" name="num1" value="0" onchange="cal()" onkeyup="cal()" />
+          <input class="input-text" id="fechas" type="number" placeholder="Valor" name="num2" value="0" onchange="cal()" onkeyup="cal()"/>
+        </fieldset>
+
+        <fieldset id="venta">
+          <legend><u>----------------------Total Venta $ (Costo Unitario * Cantidad)---------------</u></legend>
+            <img src="./css/used_product_40px.png" />
+          <input class="input-text" id="enDatos" type="number" name="sum" value="0" readonly="readonly"/>
+        </fieldset>
+      </form>
+      </div>
+    
+    <div class="botones">
+        <button onclick="MyMensaje_2()" class="small-button-submit">Guadar</button>
+        <button onclick="location.href='http://127.0.0.1:5500/Interfaz_Venta/Ventas.html'" class="small-button-submit">Regresar</button>
+        
+    </div>
+  </div>
+  <script>
+    $(function () {
+      $('input[name="dates"]').daterangepicker(
+        {
+          singleDatePicker: true,
+          showDropdowns: true,
+          minYear: 1901,
+          maxYear: parseInt(moment().format("YYYY"), 10),
+        },
+        function (start, end, label) {
+          var years = moment().diff(start, "years");
+        }
+        
+      );
+    });
+  
+    function cal() {
+          try {
+            var a = parseInt(document.f.num1.value),
+                b = parseInt(document.f.num2.value);
+            document.f.sum.value = a * b;
+          } catch (e) {
+          }
+        }
+    function MyMensaje(){
+      alert("Venta Facturada Satisfactoriamente");
+    }
+
+    function MyMensaje_2(){
+      alert("Registro Actualizado Correctamente");
+    }
+  </script>
+
+</body>
+
+</html>
