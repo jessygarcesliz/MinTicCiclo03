@@ -14,7 +14,7 @@
     <div id="div-filterUser" >
         <form action="get" id="filtroBusqueda">
         <label for="IDusuario">ID Usuario</label>
-        <input type="text"  id="IDUsuario"><br>
+        <input type="text"  id="IDUsuario"  readonly ><br>
         <label for="numeroDocumento">Numero Identidad</label>
         <input type="text"  id="numeroDocumento">
         <button   form="filtroBusqueda"  type="submit" class="small-button">Buscar</button>
@@ -28,6 +28,8 @@
             <legend>Datos Personales</legend>
             <div class="container-filters">
                 <div id="div-informacionusuario">
+                    <label for="IDusuario">ID Usuario</label>
+                    <input type="text"  id="IDUsuario" value="ID_Usuario" readonly ><br>
                     <label for="tipo"   >Tipo Usuario</label>
                     <select name="tipoUsuario" id="tipo">
                         <option value="">--selecion--</option>
