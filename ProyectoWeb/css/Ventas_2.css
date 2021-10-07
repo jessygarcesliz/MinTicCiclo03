@@ -1,4 +1,4 @@
-git@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 body {
   background-color: #faf9f8;
   font-family: "Muli", sans-serif;
@@ -325,7 +325,7 @@ img {
 }
 
 #campos {
-  border: 2px solid #636363;
+  border: 1px solid #636363;
   background: #f8f9f9;
   margin-top: 10px;
   padding-bottom: 20px;
@@ -389,6 +389,7 @@ header {
 
 #fechas {
   margin-right: 20px;
+  
   width: 33%;
   height: 40px;
   /*margin-right: 10px;*/
@@ -403,6 +404,7 @@ header {
 
 #enDatos {
   margin-right: 20px;
+  
   width: 70%;
   height: 40px;
   /*margin-right: 10px;*/
@@ -426,17 +428,82 @@ fieldset {
   background-color: #faf9f8;
   border-radius: 4px;
 }
-#estado ul li label{
-    display: inline-block;
-    width: 10em; 
+
+
+
+
+/*
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+.title {
+  text-transform: capitalize;
+  color: $font-color;
+  text-align: left;
 }
-#estado ul li {
-  display: inline-block;
+
+.label {
+  
+  font-size: $font-size-label;
+  color: $font-color;
+  font-weight: bold;
 }
-#Contactos label {
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.div-formulario {
+  width: 50%;
+  background-color: $background-div;
+  padding: 30px 15px 30px 15px;
+  box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
   position: relative;
-      display: inline-block;
-      width: 6em;
-       
-}  
-/*# sourceMappingURL=base.css.map */
+}
+
+.input-text {
+  border: 1px solid black;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #222;
+  font-size: $font-size;
+  letter-spacing: normal;
+  
+  padding: 14px 8px 14px 8px;
+  width: 100%;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button-submit {
+  background: $background-button-submit;
+  border: 1px solid #222;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $main-font;
+  font-size: $font-size;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  padding: 16px 16px 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.button-submit:hover{
+  background-color:rgb(206, 202, 202);
+  color: black;
+}
+*/
