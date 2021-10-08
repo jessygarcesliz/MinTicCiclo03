@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Actualizar Ventas</title>
+    <link rel="stylesheet" href="../../css/baseVenta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="nombre-app">JASAF Manofactura</h1>
+        <nav class="navmenu">
+            <a class="refmenu" href="#">Inicio</a>
+            <a class="refmenu" href="#">Vista 1</a>
+            <a class="refmenu" href="#">Vista 2</a>
+            <a class="refmenu" href="#">Vista 3</a>
+        </nav>
+    </header>
+    <div class="div-form">
+        <div class="container">
+            <div>
+                <h2>Actualización Información de Ventas</h2>
+            </div>
+            <form>
+                <div class="div-formulario">
+                    <br>
+                        <label>Venta No.</label>  <input type="text" id="idventa" required disabled placeholder="Número de la Venta"
+                        readonly value="000001" />    <label>Estado</label><select id="Eventa">
+                            <option value="-1" disabled selected>Seleccionar</option>
+                            <option value="0">En Proceso</option>
+                            <option value="1">Entregada</option>
+                            <option value="2">Cancelada</option>
+                         </select>
+                    <br>
+                    <br>
+                    <br>
+                        <label>Vendedor:</label>
+                        <input type="text" id="cvendedor" class="input-text" required placeholder="Código" value="1234" /> <td><button class="table-button" title="buscar Vendedor"><i class="fa fa-search blue-color"></i></button></td>
+                              <td><button class="table-button" title="agregar Vendedor">
+                                <i class="fa fa-plus-circle blue-color"></i>
+                              </button></td>
+                        <input type="text" id="nvendedor" class="input-text" required placeholder="Nombre"
+                            value="ADRIANA VASQUEZ" />
+                    <br>
+                    <br>
+                    <br>
+                        <label>ID Cliente:  </label>
+                            <input type="text" id="ccliente"  required placeholder="Cédula" value="567890" /><td>  <button class="table-button" title="buscar Vendedor"><i class="fa fa-search blue-color"></i></button></td>
+                            <td><button class="table-button" title="agregar Vendedor">
+                              <i class="fa fa-plus-circle blue-color"></i>
+                            </button></td>
+                        <input type="text" id="ncliente" class="input-text" required placeholder="Nombre" 
+                                value="EFRAIN APARADOR" />
+                    <br>
+                        <div id="recuadro">
+                            <table>
+                                <thead>
+                                    <th>Producto</th>
+                                    <th>Cantidad Vendida</th>
+                                    <th>Valor Unitario</th>
+                                    <th>Total</th>
+                                    <th>Acción</th>
+                                </thead>
+                                <tbody id="tabla">
+                                    <tr>
+                                        <td>Camiseta Hombre</td>
+                                        <td><input type="text" id="cantP" value="2" /></td>
+                                        <td>50.000</td>
+                                        <td>100.000</td>
+                                        <td><button class="table-button" title="Eliminar Producto">
+                                            <i class="fa fa-times-circle blue-color"></i>
+                                          </button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chaqueta Hombre</td>
+                                        <td><input type="text" id="cantP" value="1" /></td>
+                                        <td>175.000</td>
+                                        <td>175.000</td>
+                                        <td><button class="table-button" title="Eliminar Producto">
+                                            <i class="fa fa-times-circle blue-color"></i>
+                                          </button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    <br>
+                                 <div class="botones">
+                                     <button class="small-button-submit">Cancelar</button>
+                                     <button class="small-button-submit" onclick="alert('Datos Actualizados')">Actualizar</button>
+                                 </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
