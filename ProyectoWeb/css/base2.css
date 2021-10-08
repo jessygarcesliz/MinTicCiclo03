@@ -1,6 +1,7 @@
-git@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 body {
   background-color: #faf9f8;
+  padding: 30px 30px 15px 15px;
   font-family: "Muli", sans-serif;
 }
 
@@ -21,7 +22,6 @@ label {
 
 div h2 {
   text-align: leftS;
-  padding-bottom: 10px;
 }
 
 div label {
@@ -41,7 +41,6 @@ div label {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 20px;
 }
 
 .small-container {
@@ -136,15 +135,10 @@ div label {
   color: black;
 }
 
-.p-30-p-15 {
-  padding: 30px 30px 15px 15px;
-}
-
 .div-form {
-  padding: 30px 30px 15px 15px;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 70%;
+  width: 60%;
   display: table-caption;
 }
 
@@ -154,17 +148,9 @@ table {
   width: 100%;
 }
 
-th {
-  width: 1%;
-  margin: 15px;
-  color: #faf9f8;
-  background-color: black;
-  font-size: 0.8em;
-  text-align: center;
-  padding: 10px;
-}
-
 table thead th {
+  background-color: black;
+  color: #faf9f8;
   text-transform: capitalize;
 }
 
@@ -247,196 +233,40 @@ tr:hover {
   padding-bottom: 5px;
 }
 
-.small-button-submit {
-  background: #222 none;
-  border: 1px solid #222;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
+#div-form-datoPerso label {
   display: inline-block;
-  font-family: "Muli", sans-serif;
-  font-size: 15px;
-  font-style: normal;
-  letter-spacing: 1px;
-  line-height: 1em;
-  margin: 5px 5px 5px 5px;
-  min-height: 1em;
-  padding: 10px 10px 10px 10px;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: baseline;
-  width: 120px;
-  font-weight: bold;
-  border-radius: 5px;
+  width: 6em;
 }
 
-.small-button-submit:hover {
-  background-color: #cecaca;
-  color: black;
-}
-
-* {
-  margin: 0px;
-}
-
-u {
-  font-weight: bold;
-  font-size: 15px;
-  text-decoration: none;
-  color: #84878b;
-}
-
-img {
-  margin-left: 0px;
-  margin-right: 10px;
-  background-color: auto;
-  float: right;
-}
-
-.navmenu {
-  position: absolute;
-  display: inline;
-  -webkit-box-flex: inline-block;
-      -ms-flex: inline-block;
-          flex: inline-block;
-  float: right;
-  margin-left: 35%;
-}
-
-.refmenu {
-  /*color: rgb(82, 7, 7);*/
-  display: inline-block;
-  margin: 20px;
-  -webkit-box-flex: inline-block;
-      -ms-flex: inline-block;
-          flex: inline-block;
-  color: white;
-  text-decoration: none;
-  -webkit-transition: 0.3s ease-out all;
-  transition: 0.3s ease-out all;
-}
-
-.navmenu a:hover {
-  background: #faf9f8;
-  color: black;
-  margin: 5px;
-  padding: 15px;
-}
-
-#campos {
-  border: 2px solid #636363;
-  background: #f8f9f9;
-  margin-top: 10px;
-  padding-bottom: 20px;
-  border-radius: 15px;
-}
-
-.botones {
-  width: 100%;
-  text-align: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#body {
-  background-color: #faf9f8;
-  padding: 0px 30px 15px 15px;
-  font-family: "Muli", sans-serif;
-}
-
-header {
-  padding-bottom: 15px;
-  /*margin-top: 0x;*/
-  background: #273238;
-}
-
-#nombre-app {
-  color: #fed55f;
-  margin-left: 2%;
-  margin-top: 20px;
-  width: 30%;
-  -webkit-box-flex: inline;
-      -ms-flex: inline;
-          flex: inline;
-  display: inline-block;
-  font-size: 20px;
-}
-
-#recuadro {
-  border: 1px solid black;
-  height: 600px;
-  background-color: #faf4f4;
-  margin-top: 15px;
-}
-
-#venta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40%;
-  position: relative;
-  display: inline;
-  margin-left: 5%;
-  margin-top: 15px;
-  background-color: #faf9f8;
-  border-radius: 10px;
-}
-
-#fechas {
-  margin-right: 20px;
-  width: 33%;
-  height: 40px;
-  /*margin-right: 10px;*/
-  /*display: inline-block;*/
-  float: right;
-  padding-top: 0.9em;
-  padding-right: 1.2em;
-  padding-bottom: 0.9em;
-  padding-left: 1.2em;
-  border-color: #636363;
-}
-
-#enDatos {
-  margin-right: 20px;
-  width: 70%;
-  height: 40px;
-  /*margin-right: 10px;*/
-  /*display: inline-block;*/
-  float: right;
-  padding-top: 0.9em;
-  padding-right: 1.2em;
-  padding-bottom: 0.9em;
-  padding-left: 1.2em;
-  border-color: #636363;
-}
-
-fieldset {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  display: inline;
-  margin-left: 1%;
-  margin-top: 15px;
-  background-color: #faf9f8;
-  border-radius: 4px;
-}
-#estado ul li label{
-    display: inline-block;
-    width: 10em; 
-}
 #estado ul li {
   display: inline-block;
 }
-#Contactos label {
+
+#estado ul li label {
+  display: inline-block;
+  width: 8em;
+}
+
+#div-informacionusuario input {
+  width: 10em;
+}
+
+#div-dateperson label {
   position: relative;
-      display: inline-block;
-      width: 6em;
-       
-} 
-/*# sourceMappingURL=base.css.map */
+  display: inline-block;
+  width: 6.5em;
+}
+
+#div-dateperson input {
+  width: 12em;
+}
+
+#div-rolusuario label {
+  width: 12em;
+}
+
+#div-filterUser input {
+  display: block;
+  -webkit-box-shadow: 0 2px 5px 2px #cecaca;
+          box-shadow: 0 2px 5px 2px #cecaca;
+}

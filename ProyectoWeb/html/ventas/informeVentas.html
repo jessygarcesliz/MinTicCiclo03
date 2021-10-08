@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="esp">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equipo JASAF</title>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css"
-    />
 
-    <script src="../../externalComponents/daterangepicker-master/daterangepicker.js"></script>
-    <link rel="stylesheet" href="../../css/base.css" />
-    <link
-      rel="stylesheet"
-      href="../../externalComponents/daterangepicker-master/daterangepicker.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipo JASAF</title>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
 
-  <body>
-    <header>
-      <h1 id="nombre-app">JASAF Manofactura</h1>
-      <nav class="navmenu">
-        <a class="refmenu" href="#">Inicio</a>
-        <a class="refmenu" href="#">Vista 1</a>
-        <a class="refmenu" href="#">Vista 2</a>
-        <a class="refmenu" href="#">Vista 3</a>
-      </nav>
-    </header>
+  <script src="../../externalComponents/daterangepicker-master/daterangepicker.js"></script>
+  <link rel="stylesheet" href="../../css/base.css" />
+  <link rel="stylesheet" href="../../externalComponents/daterangepicker-master/daterangepicker.css" />
+</head>
 
-    <div id="body">
-      <div id="campos">
-        <fieldset id="venta">
-          <legend><u>Consulta de Ventas</u></legend>
-          <img src="../../images/calendar_40px.png " />
-          <input class="input-text" name="dates" id="fechas" type="text" />
-          <input class="input-text" name="dates" id="fechas" type="text" />
-        </fieldset>
+<body>
+  <header>
+    <h1 id="nombre-app">JASAF Manofactura</h1>
+    <nav class="navmenu">
+      <a class="refmenu" href="#">Inicio</a>
+      <a class="refmenu" href="#">Vista 1</a>
+      <a class="refmenu" href="#">Vista 2</a>
+      <a class="refmenu" href="#">Vista 3</a>
+    </nav>
+  </header>
 
-        <fieldset id="venta">
-          <legend><u>Consulta de Vendedor</u></legend>
-          <img src="../../images/reseller_40px.png" />
-          <input
-            class="input-text"
-            id="enDatos"
-            type="text"
-            placeholder="Nombre del Vendedor"
-          />
-        </fieldset>
+  <div id="body">
+    <div id="campos">
+      <fieldset id="venta">
+        <legend><u>Consulta de Ventas</u></legend>
+        <img src="./css/calendar_40px.png " />
+        <input class="input-text" name="dates" id="fechas" type="text" />
+        <input class="input-text" name="dates" id="fechas" type="text" />
+      </fieldset>
 
-        <fieldset id="venta">
-          <legend><u>Consulta de Cliente</u></legend>
-          <img src="../../images/customer_40px.png" />
-          <input
-            class="input-text"
-            id="enDatos"
-            type="text"
-            placeholder="Nombre del Cliente"
-          />
-        </fieldset>
+      <fieldset id="venta">
+        <legend><u>Consulta de Vendedor</u></legend>
+        <img src="./css/reseller_40px.png " />
+        <input class="input-text" id="enDatos" type="text" placeholder="Nombre del Vendedor" />
+      </fieldset>
 
-        <fieldset id="venta">
-          <legend><u>Consulta de Producto</u></legend>
-          <img src="../../images/used_product_40px.png" />
-          <input
-            class="input-text"
-            id="enDatos"
-            type="text"
-            placeholder="Nombre del Producto"
-          />
-        </fieldset>
-      </div>
+      <fieldset id="venta">
+        <legend><u>Consulta de Cliente</u></legend>
+        <img src="./css/customer_40px.png" />
+        <input class="input-text" id="enDatos" type="text" placeholder="Nombre del Cliente" />
+      </fieldset>
 
-      <div class="botones">
+      <fieldset id="venta">
+        <legend><u>Consulta de Producto</u></legend>
+        <img src="./css/used_product_40px.png" />
+        <input class="input-text" id="enDatos" type="text" placeholder="Nombre del Producto" />
+      </fieldset>
+    </div>
+
+    <div class="botones">
         <button class="small-button-submit">Listar</button>
         <button class="small-button-submit">Descargar</button>
         <button class="small-button-submit">Eliminar</button>
-        <button class="small-button-submit">Clear</button>
-      </div>
+        <button class="small-button-submit">Clear</button>      
+    </div>
 
-      <div>
-        <h2>Listado de Ventas.</h2>
-      </div>
+    <div>
+      <h2>Listado de Ventas.</h2>
+    </div>
 
+<<<<<<< HEAD
+    <div id="recuadro">
+      <table>
+        <thead>
+          <th>Item</th>
+          <th>Fecha de Venta</th>
+          <th>Código Vendedor</th>
+          <th>Nombre del Vendedor</th>
+          <th>Id Cliente</th>
+          <th>Cliente</th>
+          <th>Producto</th>
+          <th>Valor Unitario</th>
+          <th>Cantidad Vendida</th>
+          <th>Total</th>
+        </thead>
+        <tbody id="tabla">
+          <tr>
+            <td>Item 1</td>
+            <td>20/02/20201</td>
+            <td>123456</td>
+            <td>Samir</td>
+            <td>89764</td>
+            <td>Alejandra</td>
+            <td>Tv 50 pulgadas</td>
+            <td>2500000</td>
+            <td>1</td>
+            <td>2500000</td>
+          </tr>
+          <tr>
+            <td>Item 1</td>
+            <td>20/02/20201</td>
+            <td>123456</td>
+            <td>Samir</td>
+            <td>89764</td>
+            <td>Alejandra</td>
+            <td>Tv 50 pulgadas</td>
+            <td>2500000</td>
+            <td>1</td>
+            <td>2500000</td>
+          </tr>
+        </tbody>
+      </table>
+=======
       <div id="recuadro">
         <table>
           <thead>
@@ -153,22 +169,25 @@
           </tbody>
         </table>
       </div>
+>>>>>>> 9a3cbf72460997f6e0e0a7e8c83992b8fce7a6f9
     </div>
+  </div>
 
-    <script>
-      $(function () {
-        $('input[name="dates"]').daterangepicker(
-          {
-            singleDatePicker: true,
-            showDropdowns: true,
-            minYear: 1901,
-            maxYear: parseInt(moment().format("YYYY"), 10),
-          },
-          function (start, end, label) {
-            var years = moment().diff(start, "years");
-          }
-        );
-      });
-    </script>
-  </body>
+  <script>
+    $(function () {
+      $('input[name="dates"]').daterangepicker(
+        {
+          singleDatePicker: true,
+          showDropdowns: true,
+          minYear: 1901,
+          maxYear: parseInt(moment().format("YYYY"), 10),
+        },
+        function (start, end, label) {
+          var years = moment().diff(start, "years");
+        }
+      );
+    });
+  </script>
+</body>
+
 </html>
