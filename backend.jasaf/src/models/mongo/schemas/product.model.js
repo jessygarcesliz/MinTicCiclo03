@@ -2,8 +2,8 @@
  * product.js: define el esquema del modelo de mongodb 
  * para la colección de productos
  */
-
 const mongoose = require('mongoose');
+
 const {Schema} = mongoose;
 
 const ProductSchema = new Schema({
