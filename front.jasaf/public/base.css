@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+body {
+  background-color: #faf9f8;
+  font-family: "Muli", sans-serif;
+}
+
+a {
+  text-transform: capitalize;
+  color: black;
+}
+
+a:hover {
+  color: navy;
+}
+
+label {
+  font-size: 17px;
+  color: black;
+  font-weight: bold;
+}
+
+div h2 {
+  text-align: leftS;
+  padding-bottom: 10px;
+}
+
+div label {
+  padding: 30px 0px 30px 0px;
+}
+
+.title {
+  text-transform: capitalize;
+  color: black;
+  text-align: left;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.small-container {
+  width: 350px;
+  min-height: 90vh;
+  background: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: calc(100% - 350px);
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0 2px 5px 2px #cecaca;
+          box-shadow: 0 2px 5px 2px #cecaca;
+}
+
+.container-image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#78aee4), to(#9ab8db));
+  background: linear-gradient(bottom, #78aee4, #9ab8db);
+  opacity: 0.5;
+}
+
+.div-formulario {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 30px 15px 30px 15px;
+  -webkit-box-shadow: 0 2px 5px 2px #cecaca;
+          box-shadow: 0 2px 5px 2px #cecaca;
+  position: relative;
+}
+
+.input-text {
+  border: 1px solid black;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222;
+  font-size: 15px;
+  letter-spacing: normal;
+  padding: 14px 25px 14px 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button-submit {
+  background: #222 none;
+  border: 1px solid #222;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  padding: 16px 16px 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 100%;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.button-submit:hover {
+  background-color: #cecaca;
+  color: black;
+}
+
+.p-30-p-15 {
+  padding: 30px 30px 15px 15px;
+}
+
+.div-form {
+  padding: 30px 30px 15px 15px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 70%;
+  display: table-caption;
+}
+
+table {
+  border: 0px solid;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+}
+
+th {
+  width: 1%;
+  margin: 15px;
+  color: #faf9f8;
+  background-color: black;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 10px;
+}
+
+table thead th {
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(166, 169, 173, 0.205);
+}
+
+table tbody tr {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #438adb;
+  color: #faf9f8;
+}
+
+.table-button {
+  background: #5d91c2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 50px;
+  font-weight: bold;
+  border-radius: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table-button:hover {
+  background-color: #b1a7a7;
+  color: #faf9f8;
+}
+
+.container-filters {
+  background: white;
+  padding: 10px 10px 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 2px 5px 2px #cecaca;
+          box-shadow: 0 2px 5px 2px #cecaca;
+}
+
+.small-input-text {
+  border: 1px solid black;
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222;
+  font-size: 15px;
+  letter-spacing: normal;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.small-button {
+  background: #5d91c2;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 1em;
+  vertical-align: baseline;
+  width: 100px;
+  font-weight: bold;
+  border-radius: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.small-button-submit {
+  background: #222 none;
+  border: 1px solid #222;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Muli", sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 5px 5px 5px 5px;
+  min-height: 1em;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  width: 120px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.small-button-submit:hover {
+  background-color: #cecaca;
+  color: black;
+}
+
+* {
+  margin: 0px;
+}
+
+u {
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color: #84878b;
+}
+
+img {
+  margin-left: 0px;
+  margin-right: 10px;
+  background-color: auto;
+  float: right;
+}
+
+.navmenu {
+  position: absolute;
+  display: inline;
+  -webkit-box-flex: inline-block;
+      -ms-flex: inline-block;
+          flex: inline-block;
+  float: right;
+  margin-left: 35%;
+}
+
+.refmenu {
+  /*color: rgb(82, 7, 7);*/
+  display: inline-block;
+  margin: 20px;
+  -webkit-box-flex: inline-block;
+      -ms-flex: inline-block;
+          flex: inline-block;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+}
+
+.navmenu a:hover {
+  background: #faf9f8;
+  color: black;
+  margin: 5px;
+  padding: 15px;
+}
+
+#campos {
+  border: 2px solid #636363;
+  background: #f8f9f9;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+}
+
+.botones {
+  width: 100%;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#body {
+  background-color: #faf9f8;
+  padding: 0px 30px 15px 15px;
+  font-family: "Muli", sans-serif;
+}
+
+header {
+  padding-bottom: 15px;
+  /*margin-top: 0x;*/
+  background: #273238;
+}
+
+#nombre-app {
+  color: #fed55f;
+  margin-left: 2%;
+  margin-top: 20px;
+  width: 30%;
+  -webkit-box-flex: inline;
+      -ms-flex: inline;
+          flex: inline;
+  display: inline-block;
+  font-size: 20px;
+}
+
+#recuadro {
+  border: 1px solid black;
+  height: 600px;
+  background-color: #faf4f4;
+  margin-top: 15px;
+}
+
+#venta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40%;
+  position: relative;
+  display: inline;
+  margin-left: 5%;
+  margin-top: 15px;
+  background-color: #faf9f8;
+  border-radius: 10px;
+}
+
+#fechas {
+  margin-right: 20px;
+  width: 33%;
+  height: 40px;
+  /*margin-right: 10px;*/
+  /*display: inline-block;*/
+  float: right;
+  padding-top: 0.9em;
+  padding-right: 1.2em;
+  padding-bottom: 0.9em;
+  padding-left: 1.2em;
+  border-color: #636363;
+}
+
+#enDatos {
+  margin-right: 20px;
+  width: 70%;
+  height: 40px;
+  /*margin-right: 10px;*/
+  /*display: inline-block;*/
+  float: right;
+  padding-top: 0.9em;
+  padding-right: 1.2em;
+  padding-bottom: 0.9em;
+  padding-left: 1.2em;
+  border-color: #636363;
+}
+
+fieldset {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  display: inline;
+  margin-left: 1%;
+  margin-top: 15px;
+  background-color: #faf9f8;
+  border-radius: 4px;
+}
+#estado ul li label{
+    display: inline-block;
+    width: 10em; 
+}
+#estado ul li {
+  display: inline-block;
+}
+#Contactos label {
+  position: relative;
+      display: inline-block;
+      width: 6em;
+       
+} 
+/*# sourceMappingURL=base.css.map */

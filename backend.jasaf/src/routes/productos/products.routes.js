@@ -44,6 +44,7 @@ router.get('/products/serials/:serialId', (req, res) => {
 });
 
 router.get('/products/names/:productName', (req, res) => {
+    //UserSchema.find({name: { $regex: '.*' + name + '.*' } }).limit(5);
     let productName = req.params.productName;
     ProductSchema.find({ name: productName })
         .then(products => {
@@ -62,7 +63,8 @@ router.get('/products/names/:productName', (req, res) => {
 router.post('/products', (req, res) => {
     const {
         name,
-        serial, description,
+        serial, 
+        description,
         characteristics,
         price,
         brand
@@ -78,16 +80,28 @@ router.post('/products', (req, res) => {
             res.json({ message: "Producto almacenado correctamente" });
         })
         .catch(err => {
-            response.status(500).json({ message: err.message });
+            res.status(500).json({ message: err.message });
         });
-
 });
 
 // Metodo que sirve para la actualización de un producto existen
 router.put('/products/:productId', (req, res) => {
-    console.log(req.body);
-    console.log(req.params.productId);
-    res.json({ message: "Producto ACTUALIZADO correctamente" });
+    let {brand, name, description, characteristics, price} = req.body;
+    let productId = req.params.productId;
+    ProductSchema.findByIdAndUpdate(
+        {"_id" :productId},
+        {"brand": brand,
+         "name": name,
+         "description": description,
+         "characteristics": characteristics,
+         "price": price
+        }
+    ).then((product) => {
+        res.json({ message: "Producto actualizado correctamente" });
+    })
+    .catch(err => {
+        res.status(500).json({ message: "Se presento un error actualizando el producto" });
+    });
 });
 
 module.exports = router;
