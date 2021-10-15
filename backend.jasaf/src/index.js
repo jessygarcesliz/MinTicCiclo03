@@ -18,6 +18,8 @@ require('./database/mongoFactory');
 //importamos las rutas definidas para el modulo productos 
 //y se incluyeron a express
 app.use(require('./routes/productos/products.routes'));
+//se requiere la ruta para usuarios
+app.use(require('./routes/usuarios/usuarios.routes'));
 
 // Realiza la configuracion del puerto del servidor express
 app.listen(app.get('port'), () => {
