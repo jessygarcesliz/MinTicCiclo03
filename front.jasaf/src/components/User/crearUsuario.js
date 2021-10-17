@@ -1,15 +1,17 @@
-import React,{Component} from React;
-import Form from "../../components/User/Form";
-import header from "../../components/User/header";
+import React from "react";
+import Form from "./Form";
+import Header from "./header";
+
+
 
 class CrearUsuario extends React.Component{
 
 render() {
 
-    returnu (
+    return (
         <div>
-        <Header></Header>
-        <Form></Form>
+        <Header/>
+        <Form/>
         </div>
 
     )

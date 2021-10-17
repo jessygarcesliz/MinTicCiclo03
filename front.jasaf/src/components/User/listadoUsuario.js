@@ -1,8 +1,10 @@
-import { Component } from "react";
+import React from "react";
 import Header from "../../components/User/header";
 import Tables from "../../components/User/Tables";
 import Filters from "../../components/User/filters";
- class ListadoUsuario extends React.componet{
+
+
+ class ListadoUsuario extends React.Component{
 
 render(){
     return(

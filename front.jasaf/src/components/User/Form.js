@@ -1,5 +1,5 @@
 import React  from "react";
-import Controles from "./controles";
+
 
 
 class Form extends React.Component{
@@ -390,9 +390,9 @@ render(){
     <div class="botones">
         <button form="formulario" type="reset" class="small-button-submit">Cancelar</button>
         {/* <button onClick={this.handleButtonClicked.bind(this)} form="formulario" type="submit" class="small-button-submit">Guardar</button> */}
-        <button onClick={this.handleButtonClicked.bind(this)}>
+        <button onClick={this.handleButtonClicked.bind(this)} class="small-button-submit">
 
-Submit
+Actualizar
 
 </button>
     </div>

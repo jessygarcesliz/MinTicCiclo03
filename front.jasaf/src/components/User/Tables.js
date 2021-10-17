@@ -23,41 +23,50 @@ const TableHeader =()=>{
     
     }
 const TableBody=(props)=>{
-    let{userList}= this.props;
+    let{userList} = this.props;
     let userRows=userList.map((user,index)=>{
     let {id,tipoDocumento,numDocumento,name,lastname,correo,rol,permiso}=user;
-    return 
-    <div>
+   
+    });
+
+return(  
         
-        <tr key={index} >
-        <td>{id}</td>
-        <td>{tipoDocumento}</td>
-        <td>{numDocumento}</td>
-        <td>{name}</td>
-        <td>{lastname}</td>
-        <td>{correo}</td>
-        <td>{rol}</td>
-        <td>{permiso}</td>
-        <td>
-            <button className="table-button" title="Editar usuario" 
-                                    onClick={() => this.props.showSelectedProduct(user)}>
-                                <i className="fa fa-pencil-square-o"></i>
-                            </button></td>
-        
-        </tr>
-        
-        </div>
+    <tr key={index} >
+    <td>{id}</td>
+    <td>{tipoDocumento}</td>
+    <td>{numDocumento}</td>
+    <td>{name}</td>
+    <td>{lastname}</td>
+    <td>{correo}</td>
+    <td>{rol}</td>
+    <td>{permiso}</td>
+    <td>
+        <button className="table-button" title="Editar usuario" 
+                                onClick={() => this.props.showSelectedProduct(user)}>
+                            <i className="fa fa-pencil-square-o"></i>
+                        </button></td>
+    
+    </tr>
+    
+    
+    
+    
      
-});
+);
 }
 
     
 
-class Table extends React.component {
+class Table extends React.Component {
     constructor(props) {
         super(props);
     }
+    
+    
+    
 render(){
+   
+
 return(
 <table>
 <TableHeader/>
