@@ -4,6 +4,7 @@
  */
 const express = require("express");
 const cors = require("cors");
+require('dotenv').config();
 const configs = require('./configs/config');
 
 const app = express();

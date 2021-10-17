@@ -1,101 +1,22 @@
 const express = require('express');
 
-const userSchema =require('../../models/mongo/schemas/user.model');
+const userController = require('../../controllers/user.controller');
+ 
 const router = express.Router();
 
 // crear usuario
-router.post("/users",(req,res)=>{
-    const {
-        tipoUsuario,
-      tipoDocumento,
-      numDocumento,
-      name,
-      lastname,
-      razon,
-      sexo,
-      fechaNacimineto,
-      ciudad,
-      direccion,
-      barrio,
-      correo,
-      telefono,
-      movil,
-      estado,
-      rol        } = req.body;
-
-    let newUser= new userSchema({
-        tipoUsuario,
-      tipoDocumento,
-      numDocumento,
-      name,
-      lastname,
-      razon,
-      sexo,
-      fechaNacimineto,
-      ciudad,
-      direccion,
-      barrio,
-      correo,
-      telefono,
-      movil,
-      estado,
-      rol    
-    });
- 
-    newUser.save()//save user create in mongodb
-    .then((data)=>{res.json(data);})
-    .catch((error)=>res.json({message:error})) ;    
-
-    
-});
+router.post("/users",userController.creatUser);
 // get all user
- router.get("/users",(req,res)=>{
-   
-  let emptyFilter = {};
- userSchema.find(emptyFilter)
-
-    .then((data)=>res.json(data))
-    .catch((error)=>res.json({message:error})) ;    
-
-    
-});
+ router.get("/users",userController.getAllUsers);
 //get a user for id
-router.get("/users/:id",(req,res)=>{
+router.get("/users/:id",userController.filterUserById);
+router.get("/users/numDocumentos/:NumDocument", userController.filterUserByNumDocument);
+router.get("/users/rols/:typeUser", userController.filterUserByType);
+router.get("/users/estados/:stateUser", userController.filterUserByTState);
 
-  const{id}=req.params;
-//   let serialId = req.params.id;
-// userSchema.find({ serial: serialId })
-
-    userSchema
-    .findById(id)
-    .then((data)=>res.json(data))
-    .catch((error)=>res.json({message:error})) ;    
-
-    
- });
 // update a user
-router.put("/users/:id",(req,res)=>{
-    const{id}=req.params
-    const{name,lastname,rol,estado} =req.body;
-    
-        userSchema
-        .findOneAndUpdate ({_id:req.params.id},{$set:{name:req.body.name,lastname:req.body.lastname,rol,estado}})
-        .then((data)=>res.json(data))
-        .catch((error)=>res.json({message:error})) ;    
-    
-        
-    });
-//     // remove user
-//     router.delete("/users/:id",(req,res)=>{
-//         const{id}=req.params
-              
-//             userSchema
-//             .remove({_id:id})
-//             .then((data)=>res.json(data))
-//             .catch((error)=>res.json({message:error})) ;    
-        
-            
-//         });
+router.put("/users/:id",userController.updateUser);
+
 
 
 module.exports =router;
