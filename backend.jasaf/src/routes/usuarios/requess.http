@@ -9,12 +9,12 @@ Content-Type: application/json
 
 
 {
-  
+  "din": 1001,
   "tipoUsuario": "persona",
   "tipoDocumento": "cedula",
-  "numDocumento": 3333333,
-  "name":"Antonio" ,
-  "lastname": "Gomez",
+  "numDocumento": 101012,
+  "name":"MAria" ,
+  "lastname": "Perez",
   "razon":"" ,
   "sexo": "Masculino",
   "fechaNacimineto":"Enero" ,
@@ -24,9 +24,10 @@ Content-Type: application/json
   "correo": "antonio@email.com",
   "telefono": 3333333,
   "movil": 3123333333,
-  "estado": "activo",     
-  "rol": "vendedor"
+  "estado": "Autorizado",     
+  "rol": "administrador"
   }
+
 # ###
 # DELETE http://localhost:3000/api/users/616668c1341fcfa7b6c04727 HTTP/1.1
 # Content-Type: application/json
@@ -67,18 +68,12 @@ Content-Type: application/json
 
 
 ###
-POST http://localhost:7878/products/ HTTP/1.1
+PUT http://localhost:7878/products/ HTTP/1.1
 Content-Type: application/json
 
 {
 
-"name":"axy",
-"serial":"axy",
-"description":"axy",
-"brand":"12",
-"characteristics":"axy",
-"price":"1000",
-"creationDate":"axy"
+
 
 
 }

@@ -9,7 +9,7 @@ router.post("/users",userController.creatUser);
 // get all user
  router.get("/users",userController.getAllUsers);
 //get a user for id
-router.get("/users/:id",userController.filterUserById);
+router.get("/users/dins/:userId",userController.filterUserById);
 router.get("/users/numDocumentos/:NumDocument", userController.filterUserByNumDocument);
 router.get("/users/rols/:typeUser", userController.filterUserByType);
 router.get("/users/estados/:stateUser", userController.filterUserByTState);
