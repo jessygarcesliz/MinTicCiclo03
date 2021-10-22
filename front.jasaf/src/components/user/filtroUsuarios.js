@@ -38,20 +38,20 @@ class FiltroUsuarios extends React.Component {
 
     render() {
         return (
-            <div>
-                <div>
+            
+                <div id ="campos">
                     <fieldset>
                         <legend>
                             <u>Consulta de Usuarios</u>
                         </legend>
-                        <div>
+                        
                             <label>ID Usuario</label>
-                            <input className="small-input-text" type="text" id="userId" value={this.state.Id} onChange={this.onIdChange} />
+                            <input  type="text" id="userId" value={this.state.Id} onChange={this.onIdChange} />
 
                             <label>Numero Identidad</label>
-                            <input className="small-input-text" type="text" id="usernumDocumento" value={this.state.numDocumento} onChange={this.onNumDocumentoChange} />
+                            <input  type="text" id="usernumDocumento" value={this.state.numDocumento} onChange={this.onNumDocumentoChange} />
                             
-                        <div><br/><br/>
+                        <div id="div-rolusuario"><br/><br/>
 
                             <label>Rol Usuario:</label>
 
@@ -63,7 +63,7 @@ class FiltroUsuarios extends React.Component {
                                </select></p>
 
                         </div>
-                        <div><br/><br/>
+                        <div id="div-rolusuario"><br/><br/>
 
                             <label>Estado Usuario:</label>
 
@@ -77,16 +77,20 @@ class FiltroUsuarios extends React.Component {
 
                         </div>
 
+                          </fieldset>
+                               <div className="botones">
                              <button type="button" className="small-button-submit" title="Filtrar"
                                   onClick={() => this.props.filterUsers(this.state.Id, this.state.numDocumento, this.state.rol, this.state.estado)}>
                                   <i className="fa fa-pencil-square-o"></i>
                                   Filtrar
                              </button>
+                            </div>   
                         </div>
-                    </fieldset>
-                </div>
+                    
+                
 
-            </div>
+
+            
         );
     }
 }

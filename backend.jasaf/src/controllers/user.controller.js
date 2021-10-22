@@ -109,7 +109,7 @@ filterUserByTState =(req, res) => {
     });
  
     newUser.save()//save user create in mongodb
-    .then((data)=>{res.json(data);})
+    .then(()=>{res.json({message:"usuario creado correctamente"});})
     .catch((error)=>res.json({message:error})) ;  
  };
  

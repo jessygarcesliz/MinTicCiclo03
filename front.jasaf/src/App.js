@@ -8,9 +8,10 @@ import ListadoUsuarios from './components/user/listadoUsuarios';
 function App() {
   return (
     <div className="App">
+      
 
-      <ListadoUsuarios/>
       <CrearUsuario/>
+      
       
       
       </div>

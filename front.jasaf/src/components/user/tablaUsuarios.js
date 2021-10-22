@@ -30,6 +30,7 @@ class TablaUsuarios extends React.Component {
         });
         
         return (
+    <div id="recuadro">
             <table>
                 <thead>
                     <tr>
@@ -48,6 +49,7 @@ class TablaUsuarios extends React.Component {
                     {userRows}
                 </tbody>
             </table>
+</div>
         )
     }
 }
