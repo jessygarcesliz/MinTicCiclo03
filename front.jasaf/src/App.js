@@ -1,21 +1,7 @@
-import ListadoProductos from './components/product/listadoProductos';
-import ActualizarUsuario from './components/User/actualizarUsuario';
-import CrearUsuario from './components/User/crearUsuario';
- 
-import ListadoUsuarios from './components/user/listadoUsuarios';
-
+import Login from "./components/Login/authentication";
 
 function App() {
-  return (
-    <div className="App">
-      
-
-      <CrearUsuario/>
-      
-      
-      
-      </div>
-  );
+  return <div className="App">{<Login />}</div>;
 }
 
 export default App;
