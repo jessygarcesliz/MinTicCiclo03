@@ -1,59 +1,61 @@
 import React, { Component } from "react";
-import "../assets/css/base.scss";
+import "../../assets/css/base.scss";
+
+
 
 class FiltroUsuarios extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userId: "",
-            usernumDocumento: "",
-            userrol: "",
-            userestado: ""
+            Id: "",
+            numDocumento: "",
+            rol: "",
+            estado: ""
         };
 
         this.onIdChange = this.onIdChange.bind(this);
-        this.onnumDocumentoChange = this.onnumDocumentoChange.bind(this);
-        this.onrolChange = this.onrolChange.bind(this);
-        this.onestadoChange = this.onestadoChange.bind(this);
+        this.onNumDocumentoChange = this.onNumDocumentoChange.bind(this);
+        this.onRolChange = this.onRolChange.bind(this);
+        this.onEstadoChange = this.onEstadoChange.bind(this);
 
     }
 
     onIdChange(event) {
-        this.setState({ userId: event.target.value });
+        this.setState({ Id: event.target.value });
     }
 
     onNumDocumentoChange(event) {
-        this.setState({ usernumDocumento: event.target.value });
+        this.setState({ numDocumento: event.target.value });
     }
 
     onRolChange(event) {
-        this.setState({ userrol: event.target.value });
+        this.setState({ rol: event.target.value });
     }
 
     onEstadoChange(event) {
-        this.setState({ userestado: event.target.value });
+        this.setState({ estado: event.target.value });
     }
 
     render() {
         return (
-            <div>
-                <div>
+            
+                <div id ="campos">
                     <fieldset>
                         <legend>
                             <u>Consulta de Usuarios</u>
                         </legend>
-                        <div>
+                        
                             <label>ID Usuario</label>
-                            <input className="small-input-text" type="text" id="userId" value={this.state.userID} onChange={this.onIdChange} />
+                            <input  type="text" id="userId" value={this.state.Id} onChange={this.onIdChange} />
 
                             <label>Numero Identidad</label>
-                            <input className="small-input-text" type="text" id="usernumDocumento" value={this.state.userDoc} onChange={this.onnumDocumentoChange} />
+                            <input  type="text" id="usernumDocumento" value={this.state.numDocumento} onChange={this.onNumDocumentoChange} />
                             
-                        <div><br/><br/>
+                        <div id="div-rolusuario"><br/><br/>
 
                             <label>Rol Usuario:</label>
 
-                            <p><select value={this.state.Rol} onChange={this.cambioRol}>
+                            <p><select value={this.state.rol} onChange={this.onRolChange}>
                                <option>--seleccion--</option>
                                <option>Todos</option>
                                <option>Administrador</option>
@@ -61,11 +63,11 @@ class FiltroUsuarios extends React.Component {
                                </select></p>
 
                         </div>
-                        <div><br/><br/>
+                        <div id="div-rolusuario"><br/><br/>
 
                             <label>Estado Usuario:</label>
 
-                            <p><select value={this.state.Estado} onChange={this.cambioEstado}>
+                            <p><select value={this.state.estado} onChange={this.onEstadoChange}>
                                <option>--seleccion--</option>
                                <option>Todos</option>
                                <option>Autorizado</option>
@@ -75,16 +77,20 @@ class FiltroUsuarios extends React.Component {
 
                         </div>
 
+                          </fieldset>
+                               <div className="botones">
                              <button type="button" className="small-button-submit" title="Filtrar"
-                                  onClick={() => this.props.filterusers(this.state.userId, this.state.usernumDocumento, this.state.userRol, this.state.userEstado)}>
+                                  onClick={() => this.props.filterUsers(this.state.Id, this.state.numDocumento, this.state.rol, this.state.estado)}>
                                   <i className="fa fa-pencil-square-o"></i>
                                   Filtrar
                              </button>
+                            </div>   
                         </div>
-                    </fieldset>
-                </div>
+                    
+                
 
-            </div>
+
+            
         );
     }
 }

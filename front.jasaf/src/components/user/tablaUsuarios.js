@@ -9,7 +9,7 @@ class TablaUsuarios extends React.Component {
     render() {
         let {usersList} = this.props;
         let userRows = usersList.map((user, index) => {
-            let {Id, tipoUsuario, numDocumento, name, lastname, correo, rol, estado, Accion} = user;
+            let {Id, tipoUsuario, numDocumento,tipoDocumento, name, lastname, correo, rol, estado, Accion} = user;
             return <tr key={index} >
                         <td>{Id}</td>
                         <td>{tipoDocumento}</td>
@@ -19,7 +19,7 @@ class TablaUsuarios extends React.Component {
                         <td>{correo}</td>
                         <td>{rol}</td>
                         <td>{estado}</td>
-                        <td>{accion}</td>
+                        
                         <td>
                             <button className="table-button" title="Actualizar" 
                                     onClick={() => this.props.showSelectedUser(user)}>
@@ -30,6 +30,7 @@ class TablaUsuarios extends React.Component {
         });
         
         return (
+    <div id="recuadro">
             <table>
                 <thead>
                     <tr>
@@ -48,6 +49,7 @@ class TablaUsuarios extends React.Component {
                     {userRows}
                 </tbody>
             </table>
+</div>
         )
     }
 }

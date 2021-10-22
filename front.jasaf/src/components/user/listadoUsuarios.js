@@ -3,6 +3,7 @@ import axios from "axios";
 import TablaUsuarios from "./tablaUsuarios";
 import FiltroUsuarios from "./filtroUsuarios";
 import configuration from "../../config/config";
+import ActualizarUsuario from "../User/actualizarUsuario";
 
 class ListadoUsuarios extends React.Component {
 
@@ -36,15 +37,15 @@ class ListadoUsuarios extends React.Component {
         }
     }
 
-    filterUsers(userId, userNumDocumento, userRol, userEstado) {
-        if(userid){
-            this.filterById(userId);
-        }else if(usernumDocumento){
-            this.filterByNumDocumento(userNumDocumento);
-        }else if(userrol){
-                this.filterByRol(userRol);
-        }else if(userestado){
-                this.filterByEstado(userEstado);
+    filterUsers(Id, numDocumento, rol, estado) {
+        if(Id){
+            this.filterById(Id);
+        }else if(numDocumento){
+            this.filterByNumDocumento(numDocumento);
+        }else if(rol){
+                this.filterByRol(rol);
+        }else if(estado){
+                this.filterByEstado(estado);
         }else{
             this.getAlluser();
         }
@@ -61,7 +62,7 @@ getAlluser() {
     }
 
     filterById(Id){
-        axios.get(this.BASE_URL+'/ids/'+ id)
+        axios.get(this.BASE_URL+'/ids/'+ Id)
             .then((resp) => {
                 if(resp.data.length > 0){
                     this.setState({ usersList: resp.data });

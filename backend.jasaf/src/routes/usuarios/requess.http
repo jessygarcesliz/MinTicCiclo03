@@ -1,34 +1,33 @@
 ###
-GET http://localhost:7777/users HTTP/1.1
+GET http://localhost:7878/users HTTP/1.1
 Content-Type: application/json
 
 {}
 ###
-POST  http://localhost:7777/users/ HTTP/1.1
+POST  http://localhost:7878/users/ HTTP/1.1
 Content-Type: application/json
 
 
 {
-  
+  "din": 1001,
   "tipoUsuario": "persona",
   "tipoDocumento": "cedula",
-  "numDocumento": 11111,
-  "name":"fidel " ,
-  "email":"fidel.fuerte@gmail.com",
-  "apellido":"fuerte",
-  "lastname": "fuerte",
+  "numDocumento": 101012,
+  "name":"MAria" ,
+  "lastname": "Perez",
   "razon":"" ,
-  "sexo": "masculino",
-  "fechaNacimineto":"noviembre" ,
-  "ciudad": "tunja",
-  "direccion":"cll50#16b-03",
-  "barrio": "colinas del norte",
-  "correo": "fidel@gmail.com",
-  "telefono": 555555,
-  "movil": 312555555,
-  "estado": "activo",     
+  "sexo": "Masculino",
+  "fechaNacimineto":"Enero" ,
+  "ciudad": "Cucuta",
+  "direccion":"cucuta",
+  "barrio": "cucuta",
+  "correo": "antonio@email.com",
+  "telefono": 3333333,
+  "movil": 3123333333,
+  "estado": "Autorizado",     
   "rol": "administrador"
   }
+
 # ###
 # DELETE http://localhost:3000/api/users/616668c1341fcfa7b6c04727 HTTP/1.1
 # Content-Type: application/json
@@ -43,7 +42,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:7777/users HTTP/1.1
+GET http://localhost:7878/users/numDocumentos/3333333 HTTP/1.1
 Content-Type: application/json
 
 
@@ -55,9 +54,26 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:7777/users/6167597fb568bc516bc44e9f HTTP/1.1
+GET http://localhost:7878/users/616b937f7fcea9384212b21c HTTP/1.1
 Content-Type: application/json
 ###
 
-PUT  http://localhost:3000/api/61677058018ff117932b8beb HTTP/1.1
+PUT  http://localhost:7878/users/61677031018ff117932b8be9 HTTP/1.1
 Content-Type: application/json
+
+
+
+
+{}
+
+
+###
+PUT http://localhost:7878/products/ HTTP/1.1
+Content-Type: application/json
+
+{
+
+
+
+
+}
