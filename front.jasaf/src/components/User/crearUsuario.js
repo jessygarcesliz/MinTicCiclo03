@@ -127,8 +127,8 @@ class CrearUsuario extends React.Component {
   "rol": this.state.rol,
         }
         axios.post(url, {...data,_id:null})
-        .then((resp) => {
-            this.props.handleUpdateUser(true);            
+        .then((resp) => { alert("usuario creado exitosamente")
+            //this.props.handleUpdateUser(true);            
         }).catch(err => {
             alert('Error al Crear Nuevo Usuario');
         });
