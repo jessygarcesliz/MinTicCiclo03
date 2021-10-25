@@ -1,0 +1,20 @@
+/* Normalizar el compornente */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.cabezote {
+  background-color: black;
+  height: 51px;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.nombrecorporativo {
+  color: white;
+}
