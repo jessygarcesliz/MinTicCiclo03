@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.segmento {
+  display: inline-block;
+  width: 32%;
+}
+
+.central {
+  background-color: #faf9f8;
+  border: 2px solid rgb(99, 99, 99);
+  border-radius: 15px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 32%;
+  /* height: 800px; */
+  padding: 20px;
+  box-shadow: 0 2px 5px 2px rgb(206, 202, 202);
+}
