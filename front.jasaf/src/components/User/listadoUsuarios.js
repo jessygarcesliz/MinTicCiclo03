@@ -3,7 +3,7 @@ import axios from "axios";
 import TablaUsuarios from "./tablaUsuarios";
 import FiltroUsuarios from "./filtroUsuarios";
 import configuration from "../../config/config";
-import ActualizarUsuario from "../User/actualizarUsuario";
+import ActualizarUsuario from "./actualizarUsuario";
 
 class ListadoUsuarios extends React.Component {
 

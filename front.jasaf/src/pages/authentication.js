@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "../../assets/css/base.scss";
-import logo from "../../assets/images/logopeque.png";
-import Background from "../../assets/images/image-login.png";
+import "../assets/css/base.scss";
+import logo from "../assets/images/logopeque.png";
+import Background from "../assets/images/image-login.png";
 
 class Login extends React.Component {
   render() {
@@ -37,7 +37,9 @@ class Login extends React.Component {
                 </div>
                 <div>
                   <button className="button-submit">
-                    <i /*style="color: red;"*/ className="fa fa-google"></i>
+                    <i style={{ color: "red" }} className="fa fa-google">
+                      G
+                    </i>
                     Google
                   </button>
                   <button type="submit" className="button-submit">

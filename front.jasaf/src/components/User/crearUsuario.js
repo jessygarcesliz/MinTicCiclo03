@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "../../assets/css/base.scss";
 import configuration from "../../config/config";
+import { Link } from "react-router-dom";
 
 class CrearUsuario extends React.Component {
 
@@ -170,277 +171,262 @@ class CrearUsuario extends React.Component {
             <legend> <u>Información Usuario</u> </legend>
             <hr/> <br/>
             <div class="">
-    
-                <label for="IDusuario">ID Usuario</label>
-                <input 
-                type="text" 
-                id="IDUsuario" 
-                readonly  disabled 
-                value={this.state._id}/>
-                
-                <label for="tipo">Tipo Persona</label>
-                <select 
-                name="tipoUsuario" 
+              <label for="IDusuario">ID Usuario</label>
+              <input
+                type="text"
+                id="IDUsuario"
+                readonly
+                disabled
+                value={this.state._id}
+              />
+
+              <label for="tipo">Tipo Persona</label>
+              <select
+                name="tipoUsuario"
                 id="tipo"
                 value={this.state.tipoUsuario}
                 onChange={this.onTipoUsuarioChange}
+              >
+                <option value="">--selecion--</option>
+                <option value="persona" name="persona">
+                  Persona
+                </option>
+                <option value="Empresa" name="Empresa">
+                  Empresa
+                </option>
+              </select>
+              <br />
+              <br />
 
+              <div>
+                <label for="tipoDocumento">Tipo Documento</label>
+                <select
+                  name="tipoDocumento"
+                  id="tipoDocumento"
+                  value={this.state.tipoDocumento}
+                  onChange={this.onTipoDocumentoChange}
                 >
-                    <option value="">--selecion--</option>
-                    <option value="persona" name="persona">Persona</option>
-                    <option value="Empresa" name="Empresa">Empresa</option>
-                </select><br/><br/>
-    
-    
-                <div>
-                    <label for="tipoDocumento">Tipo Documento</label>
-                    <select 
-                    name="tipoDocumento" 
-                    id="tipoDocumento"
-                    value={this.state.tipoDocumento}
-                    onChange={this.onTipoDocumentoChange}
-
-
-
-
-                    >
-                        <option value="cedulaCiudadania">Cedula de Ciudadania</option>
-                        <option value="nit">Nit</option>
-                        <option value="tarjetaIdentida">Tarjeta de Identidad </option>
-                        <option value="RegistroCivil">Registro Civil </option>
-                        <option value="cedulaExtranjeria">Cedula de Extranjeria</option>
-                    </select>
-                    <label for="numeroDocumento">Numero Identidad</label>
-                    <input 
-                    type="text" 
-                    required 
-                    id="numeroDocumento" 
-                    placeholder="Numero de Documento"
-                    value={this.state.numDocumento}
-                    onChange={this.onNumDocumentoChange}
-                    
-                    /><br/>
-                </div><br/><br/>
-    
+                  <option value="cedulaCiudadania">Cedula de Ciudadania</option>
+                  <option value="nit">Nit</option>
+                  <option value="tarjetaIdentida">Tarjeta de Identidad </option>
+                  <option value="RegistroCivil">Registro Civil </option>
+                  <option value="cedulaExtranjeria">
+                    Cedula de Extranjeria
+                  </option>
+                </select>
+                <label for="numeroDocumento">Numero Identidad</label>
+                <input
+                  type="text"
+                  required
+                  id="numeroDocumento"
+                  placeholder="Numero de Documento"
+                  value={this.state.numDocumento}
+                  onChange={this.onNumDocumentoChange}
+                />
+                <br />
+              </div>
+              <br />
+              <br />
             </div>
-    
             <div id="datospersonal">
-                <legend><u>Datos Personales</u></legend>
-                <hr/> <br/>
-    
-                <label htmlfor="nombre">Nombres</label> 
-                <input 
-                type="text" 
-                required 
-                id="nombre"              
-                placeholder=" Ingrese Nombre"                
+              <legend>
+                <u>Datos Personales</u>
+              </legend>
+              <hr /> <br />
+              <label htmlfor="nombre">Nombres</label>
+              <input
+                type="text"
+                required
+                id="nombre"
+                placeholder=" Ingrese Nombre"
                 value={this.state.name}
                 onChange={this.onNameChange}
-
-
-
-                />
-                <label htmlfor="apellidos">Apellidos</label>
-                <input 
-                type="text" 
-                required 
-                id="apellidos"                 
+              />
+              <label htmlfor="apellidos">Apellidos</label>
+              <input
+                type="text"
+                required
+                id="apellidos"
                 placeholder="Ingrese Apellidos"
                 value={this.state.lastname}
                 onChange={this.onLastNameChange}
-
-
-
-                />
-                <label htmlfor="razon" name="razon">Razon Social</label>
-                <input 
-                type="text" 
-                id="razon"                              
+              />
+              <label htmlfor="razon" name="razon">
+                Razon Social
+              </label>
+              <input
+                type="text"
+                id="razon"
                 placeholder="Empresa"
                 value={this.state.razon}
                 onChange={this.onRazonChange}
-
-                /><br/><br/>
-                <div id="div-rolusuario">
-                    <label htmlfor="sexo">Sexo:</label>
-                    <select 
-                    name="sexo" 
-                    id="sexo"
-                    value={this.state.sexo}
-                    onChange ={this.onSexoChange}
-
-                    >
-                        <option value="">--seleccion--</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <label class="label">Fecha de Nacimiento</label>
-                    <input 
-                    type="date" 
-                    max="2010-12-31"  
-                    value={this.state.fechaNacimineto}
-                    onChange ={this.onFechaNacimientoChange}                   
-                    
-                    /> <br/><br/> <br/>
-    
-                </div>
-    
-    
-    
-    
-    
-    
-    
+              />
+              <br />
+              <br />
+              <div id="div-rolusuario">
+                <label htmlfor="sexo">Sexo:</label>
+                <select
+                  name="sexo"
+                  id="sexo"
+                  value={this.state.sexo}
+                  onChange={this.onSexoChange}
+                >
+                  <option value="">--seleccion--</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <label class="label">Fecha de Nacimiento</label>
+                <input
+                  type="date"
+                  max="2010-12-31"
+                  value={this.state.fechaNacimineto}
+                  onChange={this.onFechaNacimientoChange}
+                />{" "}
+                <br />
+                <br /> <br />
+              </div>
             </div>
-    
-    
-    
-    
-    
             <div id="Contactos">
-                <legend><u>Datos De Contacto</u></legend>
-                <hr/><br/><br/>
-                <label htmlfor="ciudad">Ciudad</label>
-                <input 
-                type="text" 
-                id="ciudad"                
+              <legend>
+                <u>Datos De Contacto</u>
+              </legend>
+              <hr />
+              <br />
+              <br />
+              <label htmlfor="ciudad">Ciudad</label>
+              <input
+                type="text"
+                id="ciudad"
                 placeholder="Ciudad"
                 value={this.state.ciudad}
                 onChange={this.onCiudadChange}
-
-                />
-                <label htmlfor="direccion">Direccion</label>
-                <input 
-                type="text" 
-                id="direccion"                             
+              />
+              <label htmlfor="direccion">Direccion</label>
+              <input
+                type="text"
+                id="direccion"
                 placeholder="Direccion"
                 value={this.state.direccion}
-                onChange ={this.onDireccionChange}
-
-                />
-                <label htmlfor="barrio">Barrio</label>
-                <input 
-                type="text" 
-                id="direccion"                 
+                onChange={this.onDireccionChange}
+              />
+              <label htmlfor="barrio">Barrio</label>
+              <input
+                type="text"
+                id="direccion"
                 placeholder="Barrio"
                 value={this.state.barrio}
-                onChange ={this.onBarrioChange}
-
-                /><br/><br/>
-                <label htmlfor="correo">Correo</label>
-                <input 
-                type="email" 
-                id="correo"                 
+                onChange={this.onBarrioChange}
+              />
+              <br />
+              <br />
+              <label htmlfor="correo">Correo</label>
+              <input
+                type="email"
+                id="correo"
                 placeholder="example@abc.com"
                 value={this.state.correo}
                 onChange={this.onCorreoChange}
-
-                />
-                <label htmlfor="telefono">Telefono</label>
-                <input 
-                type="text" 
+              />
+              <label htmlfor="telefono">Telefono</label>
+              <input
+                type="text"
                 id="telefono"
                 placeholder="xxx xxx xx xx"
                 value={this.state.telefono}
                 onChange={this.onTelefonoChange}
-                />
-                <label htmlfor="movil">Movil</label>
-                <input 
-                type="text" 
-                id="movil" 
+              />
+              <label htmlfor="movil">Movil</label>
+              <input
+                type="text"
+                id="movil"
                 placeholder="xxx-xxx-xx-xx"
                 value={this.state.movil}
-                onChange ={this.onMovilChange}
-
-                />
-            </div> <br/>
-    
-    
+                onChange={this.onMovilChange}
+              />
+            </div>{" "}
+            <br />
             <div id="estado" class="">
-                <legend><u>Estado Usuario</u></legend>
-                <hr/>
-    
-                <ul>
-                    <li>
-                        <div id="div-rolusuario">
-                            <label htmlfor="rolUsuario">Tipo Usuario:</label>
-    
-                            <select
-                             name="rol" 
-                             id="rolUsuario" 
-                             required
-                             value={this.state.rol}
-                             onChange={this.onRolChange}
+              <legend>
+                <u>Estado Usuario</u>
+              </legend>
+              <hr />
 
-                             >
-                                <option value="">--seleccion--</option>
-                                <option value="administrador">Administrador</option>
-                                <option value="vendedor">Vendedor</option>
-                            </select>
-    
-                        </div>
-                    </li>
-                    <li>
-                        <input
-                         type="radio" 
-                         id="actualizado" 
-                         name="estado" 
-                         value="Actualizado" 
-                         checked
-                         value={this.state.estado}
-                         onChange={this.onEstadoChange}
+              <ul>
+                <li>
+                  <div id="div-rolusuario">
+                    <label htmlfor="rolUsuario">Tipo Usuario:</label>
 
-                         />
-                        <label htmlfor="actualizado">Autorizado</label>
-                    </li>
-                    <li>
-    
-                        <input 
-                        type="radio" 
-                        id="noAutorizado" 
-                        name="estado" 
-                        value={this.state.estado}
-                        onChange={this.onEstadoChange}
-                        />
-                        <label htmlfor="noAutorizado">No Autorizado</label>
-                    </li>
-                    <li>
-    
-                        <input 
-                        type="radio" 
-                        id="pendiente" 
-                        name="estado" 
-                        value={this.state.estado}
-                         onChange={this.onEstadoChange}                   
-
-
-                        />
-                        <label htmlfor="pendiente">Pendiente</label>
-                    </li>
-    
-                </ul>
-    
+                    <select
+                      name="rol"
+                      id="rolUsuario"
+                      required
+                      value={this.state.rol}
+                      onChange={this.onRolChange}
+                    >
+                      <option value="">--seleccion--</option>
+                      <option value="administrador">Administrador</option>
+                      <option value="vendedor">Vendedor</option>
+                    </select>
+                  </div>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="actualizado"
+                    name="estado"
+                    value="Actualizado"
+                    checked
+                    value={this.state.estado}
+                    onChange={this.onEstadoChange}
+                  />
+                  <label htmlfor="actualizado">Autorizado</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="noAutorizado"
+                    name="estado"
+                    value={this.state.estado}
+                    onChange={this.onEstadoChange}
+                  />
+                  <label htmlfor="noAutorizado">No Autorizado</label>
+                </li>
+                <li>
+                  <input
+                    type="radio"
+                    id="pendiente"
+                    name="estado"
+                    value={this.state.estado}
+                    onChange={this.onEstadoChange}
+                  />
+                  <label htmlfor="pendiente">Pendiente</label>
+                </li>
+              </ul>
             </div>
-    
-    
-    
-    
-    
-    
-        </form>
-    
-    </div>
-    <div class="botones">
-        <button form="formulario" type="reset" className="small-button-submit">Cancelar</button>
-        <button   form="formulario" type="submit" className="small-button-submit" onClick={() => this.handleUpdate()}>Crear</button>
-      
-    </div>
-
-                
-            </div>
-        )
-    }
+          </form>
+        </div>
+        <div class="botones">
+          <Link
+            to="/administrador"
+            form="formulario"
+            type="reset"
+            className="small-button-submit"
+          >
+            Cancelar
+          </Link>
+          <button
+            form="formulario"
+            type="submit"
+            className="small-button-submit"
+            onClick={() => this.handleUpdate()}
+          >
+            Crear
+          </button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default CrearUsuario;
