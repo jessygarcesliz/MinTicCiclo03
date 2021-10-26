@@ -22,6 +22,7 @@ app.use(require("./routes/productos/products.routes"));
 app.use(require("./routes/usuarios/usuarios.routes"));
 //ruta informe de ventas
 app.use(require("./routes/ventas/ventas.routes"));
+app.use(require("./routes/autenticacion/auth.route"));
 
 // Realiza la configuracion del puerto del servidor express
 app.listen(app.get("port"), () => {
