@@ -127,9 +127,10 @@ class ActualizarUsuario extends React.Component {
         }
         axios.put(url, data)
         .then((resp) => {
-            this.props.handleUpdateUser(true);            
+            alert  ("usuario actualizado correctamente ") 
+            //this.props.handleUpdateUser(true);            
         }).catch(err => {
-            alert('Hubo error listando usuario');
+            alert('Hubo error actualizando  usuario');
         });
     }
 
@@ -365,7 +366,7 @@ class ActualizarUsuario extends React.Component {
                          value="Actualizado" 
                          checked
                          value={this.state.estado}
-                         onChange={this.onRolChange}
+                         onChange={this.onEstadoChange}
 
                          />
                         <label htmlfor="actualizado">Autorizado</label>
@@ -377,7 +378,7 @@ class ActualizarUsuario extends React.Component {
                         id="noAutorizado" 
                         name="estado" 
                         value={this.state.estado}
-                        onChange={this.onRolChange}
+                        onChange={this.onEstadoChange}
                         />
                         <label htmlfor="noAutorizado">No Autorizado</label>
                     </li>
@@ -388,7 +389,7 @@ class ActualizarUsuario extends React.Component {
                         id="pendiente" 
                         name="estado" 
                         value={this.state.estado}
-                         onChange={this.onRolChange}                   
+                         onChange={this.onEstadoChange}                   
 
 
                         />
@@ -408,8 +409,8 @@ class ActualizarUsuario extends React.Component {
     
     </div>
     <div class="botones">
-        <button form="formulario" type="reset" className="small-button-submit">Cancelar</button>
-        <button   form="formulario" type="submit" className="small-button-submit" onClick={() => this.handleUpdate()}>Actualizar</button>
+        <button  type="reset" className="small-button-submit">Cancelar</button>
+        <button    type="button" className="small-button-submit" onClick={() => this.handleUpdate()}>Actualizar</button>
       
     </div>
 

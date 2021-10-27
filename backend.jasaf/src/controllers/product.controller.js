@@ -41,7 +41,6 @@ getAllProducts = (request, response) => {
  };
  
  filterProductByName =(req, res) => {
-     //UserSchema.find({name: { $regex: '.*' + name + '.*' } }).limit(5);
      let productName = req.params.productName;
      ProductSchema.find({ name: productName })
          .then(products => {
@@ -94,10 +93,10 @@ getAllProducts = (request, response) => {
           "price": price
          }
      ).then((product) => {
-         res.json({ message: "Producto actualizado correctamente" });
+         res.json({ message: "Producto actualizado correctamente"});
      })
      .catch(err => {
-         res.status(500).json({ message: "Se presento un error actualizando el producto" });
+         res.status(500).json({ message: "Se presento un error actualizando el producto" + err });
      });
  };
  
