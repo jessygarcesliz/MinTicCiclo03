@@ -17,14 +17,14 @@ class Login extends React.Component {
     axios
       .post(this.BASE_URL + "/auth/users", { token: googleData.tokenId })
       .then((resp) => {
-        if (resp.data.rol === "Administrador") {
+        if (resp.data.rol === "administrador") {
           window.location.href = "/administrador";
         } else {
           window.location.href = "/vendedor";
         }
       })
       .catch((err) => {
-        alert("Hubo error autenticando el usuario" + err);
+        alert("Por favor verificar los datos de inicio de session");
       });
   };
 
