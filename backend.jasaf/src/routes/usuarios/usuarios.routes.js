@@ -15,7 +15,7 @@ router.get("/users/rols/:typeUser", userController.filterUserByType);
 router.get("/users/estados/:stateUser", userController.filterUserByTState);
 
 // update a user
-router.put("/users/:id",userController.updateUser);
+router.put("/users/:userId",userController.updateUser);
 
 
 

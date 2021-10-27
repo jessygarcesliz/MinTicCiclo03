@@ -39,7 +39,7 @@ getAllUsers = (req, res) => {
  
  filterUserByType =(req, res) => {
     //UserSchema.find({name: { $regex: '.*' + name + '.*' } }).limit(5);
-    let tyoeUser = req.params.typeUser;
+    let typeUser = req.params.typeUser;
     userSchema.find({ rol: typeUser })
         .then(users => {
             if (users.length > 0) {
@@ -154,6 +154,8 @@ filterUserByTState =(req, res) => {
          
          }
      ).then((user) => {
+
+
          res.json({ message: "usuario actualizado correctamente" });
      })
      .catch(err => {
