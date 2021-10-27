@@ -5,168 +5,171 @@ import configuration from "../../config/config";
 import { Link } from "react-router-dom";
 
 class CrearUsuario extends React.Component {
-  constructor(props) {
-    super(props);
-    this.BASE_URL =
-      configuration.backendServer.url +
-      ":" +
-      configuration.backendServer.port +
-      "/users/";
-    this.state = {
-      tipoUsuario: "",
-      tipoDocumento: "",
-      numDocumento: "",
-      name: "",
-      lastname: "",
-      razon: "",
-      sexo: "",
-      fechaNacimineto: "",
-      ciudad: "",
-      direccion: "",
-      barrio: "",
-      correo: "",
-      telefono: "",
-      movil: "",
-      estado: "",
-      rol: "",
-    };
-    this.onTipoUsuarioChange = this.onTipoUsuarioChange.bind(this);
-    this.onTipoDocumentoChange = this.onTipoDocumentoChange.bind(this);
-    this.onNumDocumentoChange = this.onNumDocumentoChange.bind(this);
-    this.onNameChange = this.onNameChange.bind(this);
-    this.onLastNameChange = this.onLastNameChange.bind(this);
-    this.onRazonChange = this.onRazonChange.bind(this);
-    this.onSexoChange = this.onSexoChange.bind(this);
-    this.onFechaNacimientoChange = this.onFechaNacimientoChange.bind(this);
-    this.onCiudadChange = this.onCiudadChange.bind(this);
-    this.onDireccionChange = this.onDireccionChange.bind(this);
-    this.onBarrioChange = this.onBarrioChange.bind(this);
-    this.onCorreoChange = this.onCorreoChange.bind(this);
-    this.onTelefonoChange = this.onTelefonoChange.bind(this);
-    this.onMovilChange = this.onNameChange.bind(this);
-    this.onEstadoChange = this.onEstadoChange.bind(this);
-    this.onRolChange = this.onRolChange.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
-  }
 
-  onTipoUsuarioChange(event) {
-    this.setState({ tipoUsuario: event.target.value });
-  }
+    constructor(props) {
+        super(props);
+        this.BASE_URL = configuration.backendServer.url +":"+
+        configuration.backendServer.port + "/users/"
+        this.state = {
+            
+            tipoUsuario:'',
+            tipoDocumento:'',
+            numDocumento:'',
+            name:'',
+            lastname:'',
+            razon:'',
+            sexo:'',
+            fechaNacimineto:'',
+            ciudad:'',
+            direccion:'',
+            barrio:'',
+            correo:'',
+            telefono:'',
+            movil:'',
+            estado:'',
+            rol:'',
+          
+            
+        }
+        this.onTipoUsuarioChange= this.onTipoUsuarioChange.bind(this);
+        this.onTipoDocumentoChange =this.onTipoDocumentoChange.bind(this);
+        this.onNumDocumentoChange = this.onNumDocumentoChange.bind(this);
+        this.onNameChange= this.onNameChange.bind(this);
+        this.onLastNameChange = this.onLastNameChange.bind(this);
+        this.onRazonChange = this.onRazonChange.bind(this);
+        this.onSexoChange = this.onSexoChange.bind(this);
+        this.onFechaNacimientoChange = this.onFechaNacimientoChange.bind(this);
+        this.onCiudadChange = this.onCiudadChange.bind(this);
+        this.onDireccionChange = this.onDireccionChange.bind(this);
+        this.onBarrioChange = this.onBarrioChange.bind(this);
+        this.onCorreoChange = this.onCorreoChange.bind(this);
+        this.onTelefonoChange = this.onTelefonoChange.bind(this);
+        this.onMovilChange = this.onNameChange.bind(this);
+        this.onEstadoChange =this.onEstadoChange.bind(this);
+        this.onRolChange = this.onRolChange.bind(this);
+        this.handleUpdate = this.handleUpdate.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
+        
+ }
 
-  onTipoDocumentoChange(event) {
-    this.setState({ tipoDocumento: event.target.value });
-  }
 
-  onNumDocumentoChange(event) {
-    this.setState({ numDocumento: event.target.value });
-  }
+    onTipoUsuarioChange(event) {
+        this.setState({ tipoUsuario: event.target.value });
+    }
 
-  onNameChange(event) {
-    this.setState({ name: event.target.value });
-  }
+    onTipoDocumentoChange(event) {
+        this.setState({ tipoDocumento: event.target.value });
 
-  onLastNameChange(event) {
-    this.setState({ lastname: event.target.value });
-  }
-  onRazonChange(event) {
-    this.setState({ razon: event.target.value });
-  }
-  onSexoChange(event) {
-    this.setState({ sexo: event.target.value });
-  }
-  onFechaNacimientoChange(event) {
-    this.setState({ fechaNacimineto: event.target.value });
-  }
-  onCiudadChange(event) {
-    this.setState({ ciudad: event.target.value });
-  }
-  onDireccionChange(event) {
-    this.setState({ direccion: event.target.value });
-  }
-  onBarrioChange(event) {
-    this.setState({ barrio: event.target.value });
-  }
-  onCorreoChange(event) {
-    this.setState({ correo: event.target.value });
-  }
-  onTelefonoChange(event) {
-    this.setState({ telefono: event.target.value });
-  }
-  onMovilChange(event) {
-    this.setState({ movil: event.target.value });
-  }
-  onEstadoChange(event) {
-    this.setState({ estado: event.target.value });
-  }
-  onRolChange(event) {
-    this.setState({ rol: event.target.value });
-  }
+    }
 
-  handleUpdate() {
-    let url = this.BASE_URL;
-    let data = {
-      tipoUsuario: this.state.tipoUsuario,
-      tipoDocumento: this.state.tipoDocumento,
-      numDocumento: this.state.numDocumento,
-      name: this.state.name,
-      lastname: this.state.lastname,
-      razon: this.state.razon,
-      sexo: this.state.sexo,
-      fechaNacimineto: this.state.fechaNacimineto,
-      ciudad: this.state.ciudad,
-      direccion: this.state.ciudad,
-      barrio: this.state.barrio,
-      correo: this.state.correo,
-      telefono: this.state.telefono,
-      movil: this.state.movil,
-      estado: this.state.estado,
-      rol: this.state.rol,
-    };
-    axios
-      .post(url, { ...data, _id: null })
-      .then((resp) => {
-        this.props.handleUpdateUser(true);
-      })
-      .catch((err) => {
-        alert("Error al Crear Nuevo Usuario");
-      });
+    onNumDocumentoChange(event) {
+        this.setState({ numDocumento: event.target.value });
+    }
 
-    this.setState({
-      tipoUsuario: "",
-      tipoDocumento: "",
-      numDocumento: "",
-      name: "",
-      lastname: "",
-      razon: "",
-      sexo: "",
-      fechaNacimineto: "",
-      ciudad: "",
-      direccion: "",
-      barrio: "",
-      correo: "",
-      telefono: "",
-      movil: "",
-      estado: "",
-      rol: "",
-    });
-  }
+    onNameChange(event) {
+        this.setState({ name: event.target.value });
+    }
 
-  handleCancel() {
-    this.props.handleUpdateUser(false);
-  }
+    onLastNameChange(event) {
+        this.setState({ lastname: event.target.value });
+    }
+    onRazonChange(event) {
+        this.setState({ razon: event.target.value });
+    }
+    onSexoChange(event) {
+        this.setState({ sexo: event.target.value });
+    }
+    onFechaNacimientoChange(event) {
+        this.setState({ fechaNacimineto: event.target.value });
+    }
+    onCiudadChange(event) {
+        this.setState({ciudad: event.target.value });
+    }
+    onDireccionChange(event) {
+        this.setState({ direccion: event.target.value });
+    }
+    onBarrioChange(event) {
+        this.setState({ barrio: event.target.value });
+    }
+    onCorreoChange(event) {
+        this.setState({ correo: event.target.value });
+    }
+    onTelefonoChange(event) {
+        this.setState({ telefono: event.target.value });
+    }
+    onMovilChange(event) {
+        this.setState({ movil: event.target.value });
+    }
+    onEstadoChange(event) {
+        this.setState({ estado: event.target.value });
+    }
+    onRolChange(event) {
+        this.setState({ rol: event.target.value });
+    }
 
-  render() {
-    return (
-      <div>
-        <h2>Crear Usuario</h2>
-        <div id="campos" className="container-filters">
-          <form action="get" id="formulario" name="fornulario">
-            <legend>
-              {" "}
-              <u>Información Usuario</u>{" "}
-            </legend>
-            <hr /> <br />
+    handleUpdate(){
+        let url = this.BASE_URL 
+        let data = {
+            "tipoUsuario": this.state.tipoUsuario,
+  "tipoDocumento": this.state.tipoDocumento,
+  "numDocumento": this.state.numDocumento,
+  "name":this.state.name,
+  "lastname": this.state.lastname,
+  "razon":this.state.razon,
+  "sexo": this.state.sexo,
+  "fechaNacimineto":this.state.fechaNacimineto,
+  "ciudad":this.state.ciudad,
+  "direccion":this.state.ciudad,
+  "barrio":this.state.barrio,
+  "correo": this.state.correo,
+  "telefono":this.state.telefono,
+  "movil":this.state.movil,
+  "estado": this.state.estado,     
+  "rol": this.state.rol,
+        }
+        axios.post(url, {...data,_id:null})
+        .then((resp) => { alert("usuario creado exitosamente")
+            //this.props.handleUpdateUser(true);            
+        }).catch(err => {
+            alert('Error al Crear Nuevo Usuario');
+        });
+
+        this.setState({
+            
+            tipoUsuario:'',
+            tipoDocumento:'',
+            numDocumento:'',
+            name:'',
+            lastname:'',
+            razon:'',
+            sexo:'',
+            fechaNacimineto:'',
+            ciudad:'',
+            direccion:'',
+            barrio:'',
+            correo:'',
+            telefono:'',
+            movil:'',
+            estado:'',
+            rol:'',
+          
+            
+        })
+    }
+
+    handleCancel(){
+        this.props.handleUpdateUser(false);
+    }
+
+    render() {        
+        return (
+            <div>
+                    
+                    <h2>Crear Usuario</h2>
+    <div id="campos" className="container-filters">
+        <form action="get" id="formulario" name="fornulario">
+            <legend> <u>Información Usuario</u> </legend>
+            <hr/> <br/>
             <div class="">
               <label for="IDusuario">ID Usuario</label>
               <input
